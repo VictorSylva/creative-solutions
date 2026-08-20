@@ -85,7 +85,7 @@ const handleLocalFallback = (message, history) => {
 const ai = {
   async chat(message, history = []) {
     const settings = db.getSettings();
-    const apiKey = settings.geminiApiKey;
+    const apiKey = process.env.GEMINI_API_KEY || settings.geminiApiKey;
 
     // Use fallback if API key is not configured
     if (!apiKey) {
@@ -196,7 +196,7 @@ Ensure the JSON block is on its own line and valid. Fill in what they've shared.
   // Generates AI Business Insights from existing CRM leads and questions
   async generateInsights(leads, questions) {
     const settings = db.getSettings();
-    const apiKey = settings.geminiApiKey;
+    const apiKey = process.env.GEMINI_API_KEY || settings.geminiApiKey;
 
     const defaultInsights = {
       summary: "This month, visitors are showing interest in setting up professional branding and seeking startup support. Ensure your portfolio features recent logo and website builds.",
