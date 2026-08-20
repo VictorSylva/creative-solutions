@@ -1,3 +1,18 @@
+// Redirect relative API calls to Render backend when hosted on Firebase
+(function() {
+  const originalFetch = window.fetch;
+  window.fetch = function(input, init) {
+    if (typeof input === 'string' && input.startsWith('/api/')) {
+      const hostname = window.location.hostname;
+      const isLocal = hostname === 'localhost' || hostname === '127.0.0.1' || hostname.startsWith('192.168.');
+      if (!isLocal) {
+        input = 'https://creative-solutions-fbbw.onrender.com' + input;
+      }
+    }
+    return originalFetch(input, init);
+  };
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
   // Authentication states
   let token = localStorage.getItem('cs_admin_token') || null;
