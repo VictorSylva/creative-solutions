@@ -85,30 +85,21 @@ const handleLocalFallback = (message, history) => {
 const ai = {
   async chat(message, history = []) {
     const settings = db.getSettings();
-    const apiKey = process.env.GEMINI_API_KEY || settings.geminiApiKey;
+    const openRouterKey = process.env.OPENROUTER_API_KEY;
+    const geminiKey = process.env.GEMINI_API_KEY || settings.geminiApiKey;
 
-    // Use fallback if API key is not configured
-    if (!apiKey) {
-      return handleLocalFallback(message, history);
-    }
+    // Load company details & context
+    const services = db.getCollection('services');
+    const faqs = db.getCollection('faqs');
+    const testimonials = db.getCollection('testimonials');
+    const knowledge = db.getCollection('aiKnowledge');
 
-    try {
-      // Initialize Gemini SDK
-      // The SDK uses system instruction and model calls.
-      const aiClient = new GoogleGenAI({ apiKey: apiKey });
-      
-      // Load company details & context
-      const services = db.getCollection('services');
-      const faqs = db.getCollection('faqs');
-      const testimonials = db.getCollection('testimonials');
-      const knowledge = db.getCollection('aiKnowledge');
+    const servicesContext = services.map(s => `- ${s.name}: ${s.description} (Category: ${s.category}). Problem solved: ${s.problemSolved}. Deliverables: ${s.whatWeProvide}. Process: ${s.expectedProcess}.`).join('\n');
+    const faqsContext = faqs.map(f => `Q: ${f.question}\nA: ${f.answer}`).join('\n\n');
+    const knowledgeContext = knowledge.map(k => `[${k.title}]: ${k.content}`).join('\n\n');
+    const testimonialsContext = testimonials.map(t => `"${t.text}" - ${t.clientName}, ${t.businessName}`).join('\n');
 
-      const servicesContext = services.map(s => `- ${s.name}: ${s.description} (Category: ${s.category}). Problem solved: ${s.problemSolved}. Deliverables: ${s.whatWeProvide}. Process: ${s.expectedProcess}.`).join('\n');
-      const faqsContext = faqs.map(f => `Q: ${f.question}\nA: ${f.answer}`).join('\n\n');
-      const knowledgeContext = knowledge.map(k => `[${k.title}]: ${k.content}`).join('\n\n');
-      const testimonialsContext = testimonials.map(t => `"${t.text}" - ${t.clientName}, ${t.businessName}`).join('\n');
-
-      const systemInstruction = `
+    const systemInstruction = `
 You are the AI Business Assistant for "Creative Solutions", an advisory, business growth, and creative services platform owned by Blessing Udechukwu (Email: blessingaduba1@gmail.com).
 
 YOUR PRINCIPLE: Give value first. Capture interest second. Convert when appropriate. Do not sound salesy or force meetings immediately. Answer questions intelligently, providing guidance on starting a business, branding, website needs, and growth strategy.
@@ -137,66 +128,133 @@ Ensure the JSON block is on its own line and valid. Fill in what they've shared.
 5. Keep answers clear, professional, mature, and helpful. Do not mention "InteracAI", "Generative AI", or "Large Language Model". You are the Creative Solutions Assistant.
 `;
 
-      // Structure history for Gemini API
-      // GoogleGenAI chat expects { role: 'user'|'model', parts: [{ text: '...' }] }
-      const contents = [];
-      
-      // Add history (limit to last 10 messages for token control)
-      const recentHistory = history.slice(-10);
-      recentHistory.forEach(h => {
-        contents.push({
-          role: h.sender === 'user' ? 'user' : 'model',
-          parts: [{ text: h.text }]
+    // 1. If OpenRouter Key is available, use DeepSeek
+    if (openRouterKey) {
+      try {
+        const messages = [
+          { role: 'system', content: systemInstruction }
+        ];
+
+        const recentHistory = history.slice(-10);
+        recentHistory.forEach(h => {
+          messages.push({
+            role: h.sender === 'user' ? 'user' : 'assistant',
+            content: h.text
+          });
         });
-      });
 
-      // Add the new user message
-      contents.push({
-        role: 'user',
-        parts: [{ text: message }]
-      });
+        messages.push({
+          role: 'user',
+          content: message
+        });
 
-      const response = await aiClient.models.generateContent({
-        model: 'gemini-2.5-flash',
-        contents: contents,
-        config: {
-          systemInstruction: systemInstruction,
-          temperature: 0.3,
+        const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${openRouterKey}`,
+            "Content-Type": "application/json",
+            "HTTP-Referer": "https://creative-solutions101.web.app",
+            "X-Title": "Creative Solutions"
+          },
+          body: JSON.stringify({
+            model: "deepseek/deepseek-chat",
+            messages: messages,
+            temperature: 0.3
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error(`OpenRouter HTTP error: ${response.status} ${response.statusText}`);
         }
-      });
 
-      const responseText = response.text || "";
-      
-      // Parse structured lead data block if present
-      let reply = responseText;
-      let leadCaptured = false;
-      let leadData = null;
+        const data = await response.json();
+        const responseText = data.choices[0].message.content || "";
 
-      const leadBlockRegex = /\|\|LEAD_DATA\|\|([\s\S]+?)\|\|/;
-      const match = responseText.match(leadBlockRegex);
-      
-      if (match) {
-        try {
-          leadData = JSON.parse(match[1].trim());
-          leadCaptured = true;
-          // Strip the JSON block from the public reply
-          reply = responseText.replace(leadBlockRegex, '').trim();
-        } catch (e) {
-          console.error("Failed to parse lead data block from Gemini response:", e);
+        let reply = responseText;
+        let leadCaptured = false;
+        let leadData = null;
+
+        const leadBlockRegex = /\|\|LEAD_DATA\|\|([\s\S]+?)\|\|/;
+        const match = responseText.match(leadBlockRegex);
+        
+        if (match) {
+          try {
+            leadData = JSON.parse(match[1].trim());
+            leadCaptured = true;
+            reply = responseText.replace(leadBlockRegex, '').trim();
+          } catch (e) {
+            console.error("Failed to parse lead data block from OpenRouter response:", e);
+          }
         }
+
+        return { reply, leadCaptured, leadData };
+      } catch (error) {
+        console.error("OpenRouter API Error, falling back to local engine:", error);
       }
-
-      return { reply, leadCaptured, leadData };
-    } catch (error) {
-      console.error("Gemini API Error, falling back to local engine:", error);
-      return handleLocalFallback(message, history);
     }
+
+    // 2. If Gemini Key is available, use Gemini SDK
+    if (geminiKey) {
+      try {
+        const aiClient = new GoogleGenAI({ apiKey: geminiKey });
+        
+        const contents = [];
+        const recentHistory = history.slice(-10);
+        recentHistory.forEach(h => {
+          contents.push({
+            role: h.sender === 'user' ? 'user' : 'model',
+            parts: [{ text: h.text }]
+          });
+        });
+
+        contents.push({
+          role: 'user',
+          parts: [{ text: message }]
+        });
+
+        const response = await aiClient.models.generateContent({
+          model: 'gemini-2.5-flash',
+          contents: contents,
+          config: {
+            systemInstruction: systemInstruction,
+            temperature: 0.3,
+          }
+        });
+
+        const responseText = response.text || "";
+        
+        let reply = responseText;
+        let leadCaptured = false;
+        let leadData = null;
+
+        const leadBlockRegex = /\|\|LEAD_DATA\|\|([\s\S]+?)\|\|/;
+        const match = responseText.match(leadBlockRegex);
+        
+        if (match) {
+          try {
+            leadData = JSON.parse(match[1].trim());
+            leadCaptured = true;
+            reply = responseText.replace(leadBlockRegex, '').trim();
+          } catch (e) {
+            console.error("Failed to parse lead data block from Gemini response:", e);
+          }
+        }
+
+        return { reply, leadCaptured, leadData };
+      } catch (error) {
+        console.error("Gemini API Error, falling back to local engine:", error);
+      }
+    }
+
+    // 3. Fallback to Local Engine if no keys configured
+    return handleLocalFallback(message, history);
   },
 
   // Generates AI Business Insights from existing CRM leads and questions
   async generateInsights(leads, questions) {
     const settings = db.getSettings();
-    const apiKey = process.env.GEMINI_API_KEY || settings.geminiApiKey;
+    const openRouterKey = process.env.OPENROUTER_API_KEY;
+    const geminiKey = process.env.GEMINI_API_KEY || settings.geminiApiKey;
 
     const defaultInsights = {
       summary: "This month, visitors are showing interest in setting up professional branding and seeking startup support. Ensure your portfolio features recent logo and website builds.",
@@ -204,17 +262,10 @@ Ensure the JSON block is on its own line and valid. Fill in what they've shared.
       recommendedAction: "Write a new guide on 'How to register and structure a business in Nigeria' to capture early stage startup leads."
     };
 
-    if (!apiKey) {
-      return defaultInsights;
-    }
+    const leadsSummary = leads.map(l => `- Need: ${l.interestedService || l.need || 'Unspecified'}, Stage: ${l.businessStage || 'Unspecified'}, Status: ${l.status}, Intent: ${l.intentScore}`).join('\n');
+    const questionsSummary = questions.map(q => `- Q: ${q.question}`).join('\n');
 
-    try {
-      const aiClient = new GoogleGenAI({ apiKey: apiKey });
-
-      const leadsSummary = leads.map(l => `- Need: ${l.interestedService || l.need || 'Unspecified'}, Stage: ${l.businessStage || 'Unspecified'}, Status: ${l.status}, Intent: ${l.intentScore}`).join('\n');
-      const questionsSummary = questions.map(q => `- Q: ${q.question}`).join('\n');
-
-      const systemInstruction = `
+    const systemInstruction = `
 You are the business intelligence advisor for Blessing Udechukwu, owner of Creative Solutions.
 You will analyze the current monthly lead logs and recent chatbot questions to provide key strategic insights.
 Do not invent numbers. Summarize trends realistically.
@@ -226,7 +277,7 @@ Provide your response in JSON format matching exactly:
 }
 `;
 
-      const prompt = `
+    const prompt = `
 Lead logs:
 ${leadsSummary || "No leads this period."}
 
@@ -234,20 +285,57 @@ Chat questions:
 ${questionsSummary || "No questions asked yet."}
 `;
 
-      const response = await aiClient.models.generateContent({
-        model: 'gemini-2.5-flash',
-        contents: prompt,
-        config: {
-          systemInstruction: systemInstruction,
-          responseMimeType: 'application/json'
-        }
-      });
+    // 1. OpenRouter DeepSeek Insight
+    if (openRouterKey) {
+      try {
+        const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${openRouterKey}`,
+            "Content-Type": "application/json",
+            "HTTP-Referer": "https://creative-solutions101.web.app",
+            "X-Title": "Creative Solutions"
+          },
+          body: JSON.stringify({
+            model: "deepseek/deepseek-chat",
+            messages: [
+              { role: 'system', content: systemInstruction },
+              { role: 'user', content: prompt }
+            ],
+            response_format: { type: "json_object" }
+          })
+        });
 
-      return JSON.parse(response.text);
-    } catch (error) {
-      console.error("Gemini Insights generation failed:", error);
-      return defaultInsights;
+        if (response.ok) {
+          const data = await response.json();
+          return JSON.parse(data.choices[0].message.content);
+        }
+      } catch (e) {
+        console.error("OpenRouter Insights generation failed:", e);
+      }
     }
+
+    // 2. Gemini Insight
+    if (geminiKey) {
+      try {
+        const aiClient = new GoogleGenAI({ apiKey: geminiKey });
+
+        const response = await aiClient.models.generateContent({
+          model: 'gemini-2.5-flash',
+          contents: prompt,
+          config: {
+            systemInstruction: systemInstruction,
+            responseMimeType: 'application/json'
+          }
+        });
+
+        return JSON.parse(response.text);
+      } catch (error) {
+        console.error("Gemini Insights generation failed:", error);
+      }
+    }
+
+    return defaultInsights;
   }
 };
 
