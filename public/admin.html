@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard & CRM — Creative Solutions</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <!-- ADMIN LOGIN OVERLAY -->
+  <div class="admin-login-overlay" id="admin-login-overlay">
+    <div class="login-card">
+      <h2 style="font-family: var(--font-headings); font-weight: 600;">Creative Solutions</h2>
+      <p style="color: var(--color-gray);">Enter admin credentials to access the business dashboard and CRM.</p>
+      
+      <form id="admin-login-form">
+        <div class="form-group" style="text-align: left;">
+          <label for="login-password">Admin Password</label>
+          <input type="password" id="login-password" class="form-control" placeholder="••••••••" required />
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Login to Dashboard</button>
+        <div id="login-error" style="color: var(--color-danger); font-size: 0.9rem; margin-top: 1rem; display: none;"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MAIN ADMIN LAYOUT -->
+  <div class="admin-layout" id="admin-layout-wrap" style="display: none;">
+    
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar">
+      <div class="sidebar-header">
+        <h2 class="sidebar-logo">CREATIVE<span>SOLUTIONS</span></h2>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a class="active" data-panel="panel-dashboard">Dashboard</a></li>
+        <li><a data-panel="panel-crm">CRM Pipeline</a></li>
+        <li><a data-panel="panel-content">Content Manager</a></li>
+        <li><a data-panel="panel-settings">Settings</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <button class="logout-btn" id="admin-logout-btn">
+          <span>Logout</span> &rarr;
+        </button>
+      </div>
+    </aside>
+
+    <!-- MAIN BODY -->
+    <main class="admin-main">
+      
+      <!-- HEADER -->
+      <div class="admin-header">
+        <h1 id="admin-title">Dashboard Overview</h1>
+        <div style="font-family: var(--font-headings); color: var(--color-gray); font-size: 0.9rem;">
+          Control Centre | Blessing Udechukwu
+        </div>
+      </div>
+
+      <!-- ==========================================
+           PANEL 1: DASHBOARD
+           ========================================== -->
+      <div class="admin-panel active" id="panel-dashboard">
+        
+        <!-- Metrics -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-label">Page Views</div>
+            <div class="stat-val" id="metric-pageviews">0</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Total Leads</div>
+            <div class="stat-val" id="metric-leads">0</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Consultation Calls</div>
+            <div class="stat-val" id="metric-consultations">0</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Assessments Run</div>
+            <div class="stat-val" id="metric-assessments">0</div>
+          </div>
+        </div>
+
+        <!-- AI Business Insights -->
+        <div class="insights-card">
+          <h3 style="font-family: var(--font-headings); font-weight: 600;">AI Strategic Insights</h3>
+          <p id="insight-summary">Analyzing database trends to formulate insights...</p>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.5rem;">
+            <div>
+              <h4 style="font-size: 0.9rem; text-transform: uppercase; color: var(--color-accent); margin-bottom: 0.5rem;">Common Inquiries</h4>
+              <div id="insight-questions" style="font-size: 0.95rem; color: var(--color-accent-hover); line-height: 1.6;">Loading...</div>
+            </div>
+            <div>
+              <h4 style="font-size: 0.9rem; text-transform: uppercase; color: var(--color-accent); margin-bottom: 0.5rem;">Recommended Action</h4>
+              <div id="insight-action" style="font-size: 0.95rem; color: var(--color-accent-hover); font-weight: 500;">Loading...</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts / Event Logs -->
+        <div class="grid-2">
+          <div style="background-color: var(--color-white); border: 1px solid var(--color-border); padding: 2rem; border-radius: var(--radius-sm);">
+            <h3>Popular Services Interest</h3>
+            <div id="analytics-services-interest" style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem;">
+              <!-- Progress list bars -->
+              <p style="color: var(--color-gray);">No service inquiries registered yet.</p>
+            </div>
+          </div>
+
+          <div style="background-color: var(--color-white); border: 1px solid var(--color-border); padding: 2rem; border-radius: var(--radius-sm);">
+            <h3>Upcoming Consultations</h3>
+            <div id="dashboard-consultations-list" style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem;">
+              <!-- Consultation entries -->
+              <p style="color: var(--color-gray);">No upcoming strategy bookings.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ==========================================
+           PANEL 2: CRM PIPELINE
+           ========================================== -->
+      <div class="admin-panel" id="panel-crm">
+        <div class="crm-board" id="crm-kanban-board">
+          
+          <!-- Column: New -->
+          <div class="crm-column" data-status="new">
+            <div class="crm-column-header">
+              <span class="crm-column-title">New Leads</span>
+              <span class="crm-column-count" id="count-new">0</span>
+            </div>
+            <div class="crm-cards-list"></div>
+          </div>
+
+          <!-- Column: Contacted -->
+          <div class="crm-column" data-status="contacted">
+            <div class="crm-column-header">
+              <span class="crm-column-title">Contacted</span>
+              <span class="crm-column-count" id="count-contacted">0</span>
+            </div>
+            <div class="crm-cards-list"></div>
+          </div>
+
+          <!-- Column: Qualified -->
+          <div class="crm-column" data-status="qualified">
+            <div class="crm-column-header">
+              <span class="crm-column-title">Qualified</span>
+              <span class="crm-column-count" id="count-qualified">0</span>
+            </div>
+            <div class="crm-cards-list"></div>
+          </div>
+
+          <!-- Column: Consultation Booked -->
+          <div class="crm-column" data-status="consultation_booked">
+            <div class="crm-column-header">
+              <span class="crm-column-title">Meeting Booked</span>
+              <span class="crm-column-count" id="count-booked">0</span>
+            </div>
+            <div class="crm-cards-list"></div>
+          </div>
+
+          <!-- Column: Consultation Completed -->
+          <div class="crm-column" data-status="consultation_completed">
+            <div class="crm-column-header">
+              <span class="crm-column-title">Meeting Held</span>
+              <span class="crm-column-count" id="count-held">0</span>
+            </div>
+            <div class="crm-cards-list"></div>
+          </div>
+
+          <!-- Column: Proposal -->
+          <div class="crm-column" data-status="proposal">
+            <div class="crm-column-header">
+              <span class="crm-column-title">Proposal Sent</span>
+              <span class="crm-column-count" id="count-proposal">0</span>
+            </div>
+            <div class="crm-cards-list"></div>
+          </div>
+
+          <!-- Column: Client -->
+          <div class="crm-column" data-status="client">
+            <div class="crm-column-header">
+              <span class="crm-column-title">Client Signed</span>
+              <span class="crm-column-count" id="count-client">0</span>
+            </div>
+            <div class="crm-cards-list"></div>
+          </div>
+
+          <!-- Column: Completed -->
+          <div class="crm-column" data-status="completed">
+            <div class="crm-column-header">
+              <span class="crm-column-title">Closed Won</span>
+              <span class="crm-column-count" id="count-completed">0</span>
+            </div>
+            <div class="crm-cards-list"></div>
+          </div>
+
+          <!-- Column: Closed -->
+          <div class="crm-column" data-status="closed">
+            <div class="crm-column-header">
+              <span class="crm-column-title">Closed Lost</span>
+              <span class="crm-column-count" id="count-closed">0</span>
+            </div>
+            <div class="crm-cards-list"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==========================================
+           PANEL 3: CONTENT MANAGER
+           ========================================== -->
+      <div class="admin-panel" id="panel-content">
+        
+        <div class="content-toolbar">
+          <div class="tabs-sub">
+            <button class="tab-sub-btn active" data-sub="content-services">Services</button>
+            <button class="tab-sub-btn" data-sub="content-resources">Resources</button>
+            <button class="tab-sub-btn" data-sub="content-faqs">FAQs</button>
+            <button class="tab-sub-btn" data-sub="content-testimonials">Testimonials</button>
+            <button class="tab-sub-btn" data-sub="content-portfolio">Portfolio</button>
+            <button class="tab-sub-btn" data-sub="content-knowledge">AI Knowledge</button>
+          </div>
+          <button class="btn btn-primary" id="content-add-btn">+ Add Content</button>
+        </div>
+
+        <!-- Dynamic Tables container -->
+        <div class="table-wrapper" id="content-table-container">
+          <table class="admin-table" id="content-data-table">
+            <thead>
+              <tr id="content-table-headers">
+                <!-- Injected headers -->
+              </tr>
+            </thead>
+            <tbody id="content-table-rows">
+              <!-- Injected rows -->
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <!-- ==========================================
+           PANEL 4: SETTINGS
+           ========================================== -->
+      <div class="admin-panel" id="panel-settings">
+        <div class="grid-2">
+          
+          <!-- Contact details settings -->
+          <div style="background-color: var(--color-white); border: 1px solid var(--color-border); padding: 2.5rem; border-radius: var(--radius-sm);">
+            <h3>Website settings</h3>
+            <p style="font-size: 0.95rem; margin-top: 0.5rem; margin-bottom: 2rem;">Edit contact parameters and business descriptions shown to visitors.</p>
+            
+            <form id="settings-info-form">
+              <div class="form-group">
+                <label for="set-email">Email Address</label>
+                <input type="email" id="set-email" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="set-phone">Phone Number</label>
+                <input type="text" id="set-phone" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="set-whatsapp">WhatsApp URL</label>
+                <input type="url" id="set-whatsapp" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="set-tagline">Website Hero Headline</label>
+                <input type="text" id="set-tagline" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="set-description">Website Hero Description</label>
+                <textarea id="set-description" class="form-control"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Save website settings</button>
+              <div id="settings-info-msg" style="margin-top: 1rem; font-size: 0.9rem; font-weight: bold;"></div>
+            </form>
+          </div>
+
+          <!-- Password and Integrations -->
+          <div style="display: flex; flex-direction: column; gap: 2rem;">
+            
+            <!-- Gemini Integrations -->
+            <div style="background-color: var(--color-white); border: 1px solid var(--color-border); padding: 2.5rem; border-radius: var(--radius-sm);">
+              <h3>API integrations</h3>
+              <p style="font-size: 0.85rem; color: var(--color-gray); margin-top: 0.5rem; margin-bottom: 1.5rem;">Configure the Gemini model. If empty, the assistant uses local rule matching.</p>
+              
+              <form id="settings-api-form">
+                <div class="form-group">
+                  <label for="set-gemini-key">Google Gemini API Key</label>
+                  <input type="password" id="set-gemini-key" class="form-control" placeholder="AI key token" />
+                </div>
+                <button type="submit" class="btn btn-dark" style="width: 100%;">Save integration key</button>
+                <div id="settings-api-msg" style="margin-top: 1rem; font-size: 0.9rem; font-weight: bold;"></div>
+              </form>
+            </div>
+
+            <!-- Password settings -->
+            <div style="background-color: var(--color-white); border: 1px solid var(--color-border); padding: 2.5rem; border-radius: var(--radius-sm);">
+              <h3>Change password</h3>
+              <p style="font-size: 0.85rem; color: var(--color-gray); margin-top: 0.5rem; margin-bottom: 1.5rem;">Change password required to access this dashboard.</p>
+              
+              <form id="settings-password-form">
+                <div class="form-group">
+                  <label for="set-old-pass">Current Password</label>
+                  <input type="password" id="set-old-pass" class="form-control" required />
+                </div>
+                <div class="form-group">
+                  <label for="set-new-pass">New Password (min 6 chars)</label>
+                  <input type="password" id="set-new-pass" class="form-control" required />
+                </div>
+                <button type="submit" class="btn btn-secondary" style="width: 100%;">Change password</button>
+                <div id="settings-pass-msg" style="margin-top: 1rem; font-size: 0.9rem; font-weight: bold;"></div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- MODAL: LEAD DETAILS -->
+  <div class="admin-modal" id="modal-lead-details">
+    <div class="modal-content" style="max-width: 750px;">
+      <div class="modal-header">
+        <h3 id="lead-modal-name">Lead Profile</h3>
+        <button class="modal-close" onclick="document.getElementById('modal-lead-details').classList.remove('open')">&times;</button>
+      </div>
+      
+      <div id="lead-modal-body">
+        <!-- Lead details dynamic injected here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: CONTENT FORM (ADD/EDIT) -->
+  <div class="admin-modal" id="modal-content-form">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="content-modal-title">Add Content</h3>
+        <button class="modal-close" onclick="document.getElementById('modal-content-form').classList.remove('open')">&times;</button>
+      </div>
+      
+      <form id="admin-content-form-fields">
+        <!-- Fields dynamically populated by active sub-tab -->
+        <div id="dynamic-form-fields-container"></div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">Save Content</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ADMIN SCRIPT LOADING -->
+  <script src="js/admin.js"></script>
+</body>
+</html>

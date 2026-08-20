@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Readiness Assessment — Creative Solutions</title>
+  <meta name="description" content="Take our interactive business readiness assessment. Get instant feedback on your startup strengths and areas to improve before scaling or raising capital.">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .result-cards-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+    .result-card-inner {
+      background-color: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: 2.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- DYNAMICALLY LOADED HEADER -->
+  <header></header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header-bg" style="background-image: url('asset/audience-2.png');">
+    <div class="container">
+      <span class="section-tag">Interactive Evaluation</span>
+      <h1>Business Readiness Assessment</h1>
+      <p>Analyze your business structure, identify operational gaps, and check what parameters are needed to scale or package your ideas for growth support.</p>
+    </div>
+  </section>
+
+  <!-- WIZARD CONTAINER -->
+  <section class="wizard-section" style="background-color: var(--color-milk);">
+    <div class="container" style="padding-top: 2rem; padding-bottom: 5rem;">
+      
+      <!-- Wizard Card -->
+      <div class="form-wizard-card" id="assessment-wizard-card">
+        
+        <!-- Progress Bar -->
+        <div class="progress-bar-wrap">
+          <div class="progress-bar-fill" id="assessment-progress-fill"></div>
+        </div>
+
+        <form id="assessment-form">
+          
+          <!-- STEP 1: Business Basics -->
+          <div class="wizard-step active" data-step="1">
+            <span class="section-tag">Step 1 of 4</span>
+            <h3 style="margin-bottom: 1.5rem;">Tell us about your business idea</h3>
+            
+            <div class="form-group">
+              <label for="assess-business">Business Name (or temporary name)</label>
+              <input type="text" id="assess-business" class="form-control" placeholder="My Startup Ltd" required />
+            </div>
+
+            <div class="form-group">
+              <label for="assess-industry">Industry / Sector</label>
+              <input type="text" id="assess-industry" class="form-control" placeholder="E-commerce, Agriculture, Consulting, Retail..." required />
+            </div>
+
+            <div class="form-group">
+              <label>Current Business Stage</label>
+              <div class="form-options-grid">
+                <div class="option-box" data-value="idea">
+                  <h5>Idea Stage</h5>
+                  <p>Developing concept, no active prototype.</p>
+                </div>
+                <div class="option-box" data-value="startup">
+                  <h5>Just Starting</h5>
+                  <p>Registered, initial operations or MVP.</p>
+                </div>
+                <div class="option-box" data-value="revenue">
+                  <h5>Generating Revenue</h5>
+                  <p>Active customers, recurring sales.</p>
+                </div>
+                <div class="option-box" data-value="scaling">
+                  <h5>Scaling Up</h5>
+                  <p>Proven model, seeking rapid growth.</p>
+                </div>
+              </div>
+              <input type="hidden" id="assess-stage" value="" required />
+            </div>
+          </div>
+
+          <!-- STEP 2: Operations & Scale -->
+          <div class="wizard-step" data-step="2">
+            <span class="section-tag">Step 2 of 4</span>
+            <h3 style="margin-bottom: 1.5rem;">Operations & Financial Status</h3>
+
+            <div class="form-group">
+              <label for="assess-duration">How long has the business existed?</label>
+              <select id="assess-duration" class="form-control">
+                <option value="concept">Only a concept / Not registered</option>
+                <option value="0-6">0 - 6 months</option>
+                <option value="6-12">6 - 12 months</option>
+                <option value="1-3">1 - 3 years</option>
+                <option value="3+">3+ years</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Are your financial records separated from personal accounts?</label>
+              <div class="form-options-grid">
+                <div class="option-box" data-value="yes">
+                  <h5>Yes</h5>
+                  <p>Dedicated business account, separate books.</p>
+                </div>
+                <div class="option-box" data-value="no">
+                  <h5>No</h5>
+                  <p>Co-mingling funds, no formal ledger.</p>
+                </div>
+              </div>
+              <input type="hidden" id="assess-revenue" value="" required />
+            </div>
+
+            <div class="form-group">
+              <label for="assess-employees">Number of active employees</label>
+              <select id="assess-employees" class="form-control">
+                <option value="1">Solo founder (1)</option>
+                <option value="2-5">Small team (2 - 5)</option>
+                <option value="6-10">Growing team (6 - 10)</option>
+                <option value="11+">Structured enterprise (11+)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- STEP 3: Obstacles & Ambitions -->
+          <div class="wizard-step" data-step="3">
+            <span class="section-tag">Step 3 of 4</span>
+            <h3 style="margin-bottom: 1.5rem;">Obstacles & Ambitions</h3>
+
+            <div class="form-group">
+              <label for="assess-challenge">What is your primary business challenge?</label>
+              <textarea id="assess-challenge" class="form-control" placeholder="E.g., Lack of online visibility, branding is amateur, cashflows are unorganized, need website lead captures..." required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="assess-goal">Primary goal for the next 90 days?</label>
+              <input type="text" id="assess-goal" class="form-control" placeholder="E.g., Complete first beta launch, register entity, scale customer acquisition..." required />
+            </div>
+
+            <div class="form-group">
+              <label for="assess-support">What type of support do you think you need?</label>
+              <select id="assess-support" class="form-control">
+                <option value="strategic">Strategic advisory / Business plans</option>
+                <option value="branding">Logo design & Visual identity</option>
+                <option value="web">Website design & Development</option>
+                <option value="marketing">Digital advertising & Promotions</option>
+                <option value="collateral">Flyers & Sales collateral</option>
+                <option value="comprehensive">Comprehensive growth packages</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- STEP 4: Lead Capture -->
+          <div class="wizard-step" data-step="4">
+            <span class="section-tag">Step 4 of 4</span>
+            <h3 style="margin-bottom: 1.5rem;">Receive your results</h3>
+            <p style="margin-bottom: 1.8rem; font-size: 0.95rem;">Enter your contact information to save your business profile and generate the detailed readiness report.</p>
+
+            <div class="form-group">
+              <label for="assess-name">Full Name *</label>
+              <input type="text" id="assess-name" class="form-control" placeholder="Blessing Udechukwu" required />
+            </div>
+
+            <div class="form-group">
+              <label for="assess-email">Email Address *</label>
+              <input type="email" id="assess-email" class="form-control" placeholder="blessingaduba1@gmail.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="assess-phone">Phone Number</label>
+              <input type="tel" id="assess-phone" class="form-control" placeholder="+234 800 000 0000" />
+            </div>
+
+            <p style="font-size: 0.75rem; color: var(--color-gray); margin-top: 1rem;">
+              Disclaimer: The Business Assessment is a strategic planning guide. It is NOT a funding approval tool, loan application, or guarantee of investments. We do not represent financial regulators.
+            </p>
+          </div>
+
+          <!-- Navigation controls -->
+          <div class="wizard-nav">
+            <button type="button" class="btn btn-secondary" id="assess-prev-btn" style="visibility: hidden;">Previous</button>
+            <button type="button" class="btn btn-primary" id="assess-next-btn">Next Step</button>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- RESULTS DISPLAY PANEL (Hidden initially) -->
+      <div id="assessment-results-panel" style="display: none; animation: fadeIn 0.5s ease;">
+        <div class="result-cards-grid">
+          
+          <!-- Detailed Report -->
+          <div class="result-card-inner">
+            <span class="section-tag">Evaluation Complete</span>
+            <h2>Your Business Profile</h2>
+            <div class="result-badge" id="result-stage-badge">Startup Stage</div>
+            
+            <div class="result-section">
+              <h4>Key Strengths</h4>
+              <ul class="result-list strengths" id="result-strengths-list">
+                <!-- Injected -->
+              </ul>
+            </div>
+
+            <div class="result-section" style="margin-top: 2rem;">
+              <h4>Areas to Improve</h4>
+              <ul class="result-list improvements" id="result-improvements-list">
+                <!-- Injected -->
+              </ul>
+            </div>
+
+            <div style="margin-top: 2.5rem; border-top: 1px solid var(--color-border); padding-top: 2rem; font-size: 0.8rem; color: var(--color-gray);">
+              Disclaimer: This roadmap represents advisory recommendations based on your responses.
+            </div>
+          </div>
+
+          <!-- Next Steps & Recommendations -->
+          <div class="result-sidebar" style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div class="result-card-inner" style="background-color: var(--color-accent-light); border-color: var(--color-accent);">
+              <h3 style="color: var(--color-accent);">Recommended Solutions</h3>
+              <p style="font-size: 0.9rem; margin-top: 0.5rem; margin-bottom: 1.5rem;">We suggest reviewing the following Creative Solutions services to resolve your current hurdles:</p>
+              
+              <div id="recommended-services-list" style="display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 2rem;">
+                <!-- Injected -->
+              </div>
+            </div>
+
+            <div class="result-card-inner">
+              <h3>Discuss your results</h3>
+              <p style="font-size: 0.9rem; margin-top: 0.5rem; margin-bottom: 1.5rem;">Book a strategy consultation with Blessing Udechukwu to refine this readiness roadmap.</p>
+              <a href="book.html?from=assessment" class="btn btn-primary" style="width: 100%;">Schedule Free Session</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DYNAMICALLY LOADED FOOTER -->
+  <footer></footer>
+
+  <!-- SCRIPT LOADING -->
+  <script src="js/components.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/assessment.js"></script>
+</body>
+</html>

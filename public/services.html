@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services — Creative Solutions</title>
+  <meta name="description" content="Explore Creative Solutions' capabilities: Portfolio Building, Website Building, Logo Design, Strategy Consultation, Digital Advertising, and Flyer Design.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- DYNAMICALLY LOADED HEADER -->
+  <header></header>
+
+  <!-- DYNAMIC PAGE HEADER -->
+  <section class="page-header">
+    <div class="container grid-2" style="align-items: center;">
+      <div>
+        <span class="section-tag" id="services-header-tag">What We Do</span>
+        <h1 id="services-header-title">Our Services</h1>
+        <p id="services-header-desc">Loading details...</p>
+      </div>
+      <div class="page-header-image">
+        <img src="asset/services-hero.png" alt="Tailored Digital Design & Growth Solutions" style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-sm); border: 1px solid var(--color-border); box-shadow: var(--shadow-subtle);" />
+      </div>
+    </div>
+  </section>
+
+  <!-- DYNAMIC CONTENT CONTAINER -->
+  <section class="services-content-section" style="background-color: var(--color-milk);">
+    <div class="container" id="services-main-container" style="padding-top: 1rem; padding-bottom: 5rem;">
+      <!-- Content Injected via main.js -->
+      <div style="text-align: center; padding: 4rem 0; color: var(--color-gray);">Loading services details...</div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION BANNER -->
+  <section class="services-cta" style="background-color: var(--color-white); border-top: 1px solid var(--color-border); text-align: center;">
+    <div class="container" style="max-width: 600px;">
+      <span class="section-tag">Strategic Alignment</span>
+      <h2>Not sure which solution matches your business stage?</h2>
+      <p style="margin-top: 0.5rem; margin-bottom: 2rem;">Take our interactive Business Assessment. We'll evaluate your startup readiness and recommend the exact steps to implement.</p>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="assessment.html" class="btn btn-primary">Take Business Assessment</a>
+        <button onclick="document.getElementById('chat-widget-trigger').click();" class="btn btn-secondary">Ask AI Assistant</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- DYNAMICALLY LOADED FOOTER -->
+  <footer></footer>
+
+  <!-- SCRIPT LOADING -->
+  <script src="js/components.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Consultation — Creative Solutions</title>
+  <meta name="description" content="Schedule a strategy consultation session with Blessing Udechukwu to discuss website building, logo identity, or startup validation.">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .booking-layout {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 3.5rem;
+      margin-top: 2rem;
+    }
+    .booking-form-box {
+      background-color: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: 3rem;
+      box-shadow: var(--shadow-subtle);
+    }
+    .prep-box {
+      background-color: var(--color-white);
+      border: 1px solid var(--color-border);
+      padding: 2.5rem;
+      border-radius: var(--radius-sm);
+    }
+    #booking-success-message {
+      display: none;
+      background-color: var(--color-accent-light);
+      border: 1px solid var(--color-accent);
+      padding: 3rem;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      margin: 3rem auto;
+      max-width: 600px;
+      animation: fadeIn 0.4s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- DYNAMICALLY LOADED HEADER -->
+  <header></header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header-bg" style="background-image: url('asset/audience-4.png');">
+    <div class="container">
+      <span class="section-tag">1-on-1 Strategy Session</span>
+      <h1>Schedule a Consultation</h1>
+      <p>Select your preferred date, summarize your business constraints, and lock in a strategy session with Blessing Udechukwu.</p>
+    </div>
+  </section>
+
+  <!-- BOOKING SECTION -->
+  <section class="booking-section" style="background-color: var(--color-milk);">
+    <div class="container" style="padding-top: 2rem; padding-bottom: 5rem;">
+      
+      <!-- SUCCESS CONTAINER -->
+      <div id="booking-success-message">
+        <span style="font-size: 3rem;">📅</span>
+        <h2 style="margin-top: 1rem;">Consultation Requested!</h2>
+        <p style="margin-top: 0.5rem; margin-bottom: 2rem;">Thank you. Your consultation request has been logged. Blessing Udechukwu will send a calendar invite and confirmation shortly.</p>
+        <a href="index.html" class="btn btn-primary">Back to Homepage</a>
+        <a href="resources.html" class="btn btn-secondary">Browse Resource Guides</a>
+      </div>
+
+      <!-- LAYOUT WRAP -->
+      <div class="booking-layout" id="booking-main-layout">
+        
+        <!-- Form Panel -->
+        <div class="booking-form-box">
+          <form id="booking-form">
+            
+            <h3 style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem;">Your Details</h3>
+            
+            <div class="grid-2" style="gap: 1.5rem;">
+              <div class="form-group">
+                <label for="book-name">Full Name *</label>
+                <input type="text" id="book-name" class="form-control" placeholder="Blessing Udechukwu" required />
+              </div>
+              <div class="form-group">
+                <label for="book-email">Email Address *</label>
+                <input type="email" id="book-email" class="form-control" placeholder="blessingaduba1@gmail.com" required />
+              </div>
+            </div>
+
+            <div class="grid-2" style="gap: 1.5rem;">
+              <div class="form-group">
+                <label for="book-phone">Phone Number *</label>
+                <input type="tel" id="book-phone" class="form-control" placeholder="+234 800 000 0000" required />
+              </div>
+              <div class="form-group">
+                <label for="book-business">Business Name (or Idea)</label>
+                <input type="text" id="book-business" class="form-control" placeholder="Creative Solutions" />
+              </div>
+            </div>
+
+            <div class="grid-2" style="gap: 1.5rem;">
+              <div class="form-group">
+                <label for="book-industry">Industry / Sector</label>
+                <input type="text" id="book-industry" class="form-control" placeholder="Retail, Technology, Beauty, Health..." />
+              </div>
+              <div class="form-group">
+                <label for="book-stage">Current Business Stage</label>
+                <select id="book-stage" class="form-control">
+                  <option value="Idea Stage">Idea Stage (Concept only)</option>
+                  <option value="Just Starting">Just Starting (MVP / Registered)</option>
+                  <option value="Generating Revenue">Generating Revenue (Active clients)</option>
+                  <option value="Scaling Up">Scaling Up (Growing sales)</option>
+                </select>
+              </div>
+            </div>
+
+            <h3 style="margin-top: 2rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem;">Session Details</h3>
+
+            <div class="form-group">
+              <label for="book-service">Service of Interest</label>
+              <select id="book-service" class="form-control">
+                <option value="General Strategy">General Strategic Guidance</option>
+                <option value="Website Building">Website Building</option>
+                <option value="Logo Design">Logo Design & Visual Branding</option>
+                <option value="Portfolio Building">Professional Portfolio Building</option>
+                <option value="Digital Promotions">Digital Promotions & Advertising</option>
+                <option value="Flyer Design">Flyer & Print Layout Design</option>
+                <option value="Startup Readiness">Startup / Funding Readiness Support</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="book-challenge">Main Challenge or Blocker *</label>
+              <textarea id="book-challenge" class="form-control" placeholder="Describe the main hurdle you need to solve right now (e.g. need website landing page, branding looks amateur, want help structure startup docs)..." required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="book-goal">Desired Session Outcome *</label>
+              <input type="text" id="book-goal" class="form-control" placeholder="E.g., Clear step-by-step roadmap, website copy outline, logo references approved" required />
+            </div>
+
+            <div class="grid-2" style="gap: 1.5rem;">
+              <div class="form-group">
+                <label for="book-date">Preferred Date *</label>
+                <input type="date" id="book-date" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label for="book-time">Preferred Time Slot *</label>
+                <select id="book-time" class="form-control" required>
+                  <option value="">Select slot</option>
+                  <option value="09:00">Morning (09:00 AM)</option>
+                  <option value="11:00">Morning (11:00 AM)</option>
+                  <option value="14:00">Afternoon (02:00 PM)</option>
+                  <option value="16:00">Afternoon (04:00 PM)</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">Book Strategy Consultation</button>
+            <p style="font-size: 0.75rem; color: var(--color-gray); margin-top: 1rem; text-align: center;">
+              Disclaimer: Scheduling a strategy call is free. We do not distribute capital, loans or offer guaranteed funding.
+            </p>
+          </form>
+        </div>
+
+        <!-- Sidebar / Prep info -->
+        <div class="booking-sidebar" style="display: flex; flex-direction: column; gap: 1.5rem;">
+          
+          <div class="prep-box">
+            <h3 style="margin-bottom: 1rem;">How to Prepare</h3>
+            <p style="font-size: 0.9rem; line-height: 1.5;">To ensure a highly valuable session, please complete the following steps before our scheduled meeting time:</p>
+            <ul class="audience-list" style="margin-top: 1rem; font-size: 0.85rem;">
+              <li>Write down your top 3 operational challenges.</li>
+              <li>Compile any existing branding files or logos.</li>
+              <li>If you have completed the Business Assessment, review your gap findings.</li>
+            </ul>
+          </div>
+
+          <div class="prep-box" style="background-color: var(--color-accent-light); border-color: var(--color-accent);">
+            <h3 style="color: var(--color-accent); margin-bottom: 0.8rem;">Need immediate help?</h3>
+            <p style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">You can message Blessing Udechukwu directly on WhatsApp for urgent queries.</p>
+            <a href="https://wa.me/2348123456789" id="booking-whatsapp-link" target="_blank" class="btn btn-dark" style="width: 100%; text-align: center;">Chat via WhatsApp</a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DYNAMICALLY LOADED FOOTER -->
+  <footer></footer>
+
+  <!-- SCRIPT LOADING -->
+  <script src="js/components.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

@@ -1,0 +1,1339 @@
+{
+  "settings": {
+    "businessName": "Creative Solutions",
+    "ownerName": "Blessing Udechukwu",
+    "email": "blessingaduba1@gmail.com",
+    "phone": "+234 812 345 6789",
+    "whatsapp": "https://wa.me/2348123456789",
+    "socialLinks": {
+      "facebook": "https://facebook.com/creativesolutions",
+      "instagram": "https://instagram.com/creativesolutions",
+      "linkedin": "https://linkedin.com/company/creativesolutions",
+      "twitter": "https://twitter.com/creativesolutions"
+    },
+    "geminiApiKey": "",
+    "adminPasswordHash": "$2a$10$nbLWEHJ8u8frh9waDclUi.G0oIAVQnPXWFbv2prNGu6JaC06cCGIW",
+    "enableNotifications": true,
+    "siteTagline": "Turning Ideas Into Practical Solutions and Business Growth.",
+    "siteDescription": "Creative Solutions supports entrepreneurs and businesses with strategic guidance, creative services, digital solutions and business support designed to help them move from ideas to meaningful results."
+  },
+  "services": [
+    {
+      "id": "portfolio-building",
+      "name": "Portfolio Building",
+      "category": "creative",
+      "description": "Professional portfolios that communicate skills, work and value.",
+      "icon": "briefcase",
+      "problemSolved": "Talented individuals and professionals fail to land clients or jobs because they lack a structured, polished showcase of their capabilities.",
+      "whatWeProvide": "We design and curate professional digital portfolios, compile project sheets, write compelling case studies of your past work, and format your professional bio for maximum impact.",
+      "expectedProcess": "1. Intake session to gather work history and assets. 2. Selection and editing of key projects. 3. Portfolio design and content drafting. 4. Final delivery of digital asset/live link.",
+      "faqs": [
+        {
+          "q": "What should I include in my portfolio if I have little experience?",
+          "a": "We help you highlight personal projects, volunteer work, and training assignments structured as professional case studies to demonstrate your potential."
+        },
+        {
+          "q": "Do you build the portfolio website too?",
+          "a": "Yes, we can design the layout. If you need a fully interactive live website, we recommend combining this with our Website Building service."
+        }
+      ]
+    },
+    {
+      "id": "website-building",
+      "name": "Website Building",
+      "category": "digital",
+      "description": "Modern websites that establish credibility and provide businesses with a strong digital presence.",
+      "icon": "globe",
+      "problemSolved": "Businesses lose credibility and potential leads because they don't have a professional online home or because their current website is hard to navigate.",
+      "whatWeProvide": "Custom responsive website design and development, optimized for desktop and mobile, with integrated contact forms, clear call-to-actions, basic SEO setup, and fast loading speeds.",
+      "expectedProcess": "1. Strategy call to define website goals. 2. Layout design approval. 3. Development and copywriting. 4. Testing and launch support.",
+      "faqs": [
+        {
+          "q": "Will I be able to update my website content myself?",
+          "a": "Yes. All our websites are built with user-friendly content controls or custom dashboards so you can manage pages without coding."
+        },
+        {
+          "q": "How long does it take to build a business website?",
+          "a": "Typically between 2 to 4 weeks depending on the complexity and scope of the website."
+        }
+      ]
+    },
+    {
+      "id": "logo-design",
+      "name": "Logo Design",
+      "category": "creative",
+      "description": "Professional identity design that helps businesses become recognizable.",
+      "icon": "palette",
+      "problemSolved": "Businesses struggle to look trustworthy and memorable because they use generic logos or lack consistent branding.",
+      "whatWeProvide": "Custom logo concepts, color palette definition, typography selection, and a basic brand guide containing raw and print-ready files.",
+      "expectedProcess": "1. Brand questionnaire and reference moodboard. 2. Presentation of logo concepts. 3. Feedback and refinements. 4. Delivery of full brand asset package.",
+      "faqs": [
+        {
+          "q": "What files do I receive?",
+          "a": "You will receive high-resolution PNG and JPEG files, vector source files (AI/EPS) for scaling, and transparent background versions."
+        },
+        {
+          "q": "How many revisions do I get?",
+          "a": "Our standard package includes 3 rounds of design refinements to make sure you are fully satisfied."
+        }
+      ]
+    },
+    {
+      "id": "consultation",
+      "name": "Strategic Consultation",
+      "category": "strategic",
+      "description": "One-on-one professional guidance based on the client's specific needs.",
+      "icon": "users",
+      "problemSolved": "Entrepreneurs and business owners make costly mistakes due to a lack of strategic direction, guidance, and clear planning.",
+      "whatWeProvide": "Focused strategy sessions to analyze your business ideas, assess market readiness, identify operational bottlenecks, and map out practical steps for execution and growth.",
+      "expectedProcess": "1. Pre-meeting questionnaire to analyze goals. 2. 60-minute intensive call or in-person session. 3. Written post-session summary report with action items.",
+      "faqs": [
+        {
+          "q": "How should I prepare for a consultation?",
+          "a": "We recommend writing down your top three current business challenges and gathering any existing business materials or plans."
+        },
+        {
+          "q": "What happens after the consultation?",
+          "a": "You will receive a clear action sheet. You can then choose to execute the steps independently or leverage our support services for implementation."
+        }
+      ]
+    },
+    {
+      "id": "digital-advertising",
+      "name": "Digital Advertising & Promotions",
+      "category": "digital",
+      "description": "Digital promotional solutions designed to increase visibility and reach.",
+      "icon": "trending-up",
+      "problemSolved": "Great products or services go unnoticed because businesses don't know how to reach their target audience effectively online.",
+      "whatWeProvide": "Ad campaign planning, target audience research, ad creative design, copy drafting, budget planning, and analytics tracking setup for platforms like Facebook, Instagram, or Google.",
+      "expectedProcess": "1. Audience and goals definition. 2. Creative development (graphics/ad copy). 3. Campaign setup and launch. 4. Ongoing optimization and performance reports.",
+      "faqs": [
+        {
+          "q": "Do you provide the ad budget?",
+          "a": "No, the advertising budget is paid directly to the ad platforms (Meta, Google) by the client. We manage and optimize that budget."
+        },
+        {
+          "q": "How do I know if my ads are working?",
+          "a": "We set up tracking so you can see exactly how many clicks, leads, and inquiries are generated from your budget, and provide clear bi-weekly summaries."
+        }
+      ]
+    },
+    {
+      "id": "flyer-design",
+      "name": "Flyer & Collateral Design",
+      "category": "creative",
+      "description": "Professional promotional materials for communicating offers, events and business messages.",
+      "icon": "file-text",
+      "problemSolved": "Offers and events fail to attract attention because of cluttered, amateur, or unclear promotional flyers.",
+      "whatWeProvide": "Eye-catching, professional design for digital flyers (social media) and print materials, with clear typography, content hierarchy, and strong calls-to-action.",
+      "expectedProcess": "1. Outline text, key offer details, and branding guidelines. 2. Draft design concepts. 3. Revisions and final file prep.",
+      "faqs": [
+        {
+          "q": "Can you help write the text for my flyer?",
+          "a": "Yes, we refine your raw text to make sure it is punchy, clear, and leads to conversions."
+        },
+        {
+          "q": "Do you handle the printing?",
+          "a": "We deliver digital print-ready PDFs with correct margins and bleeds. You can send these to any commercial printer or use them on social media."
+        }
+      ]
+    },
+    {
+      "id": "business-readiness-support",
+      "name": "Startup & Funding Readiness Support",
+      "category": "strategic",
+      "description": "Analyzing business ideas, readiness, and mapping requirements for strategic growth support.",
+      "icon": "shield",
+      "problemSolved": "Startups fail to attract funding or long-term partners because their business structure, records, or plans are incomplete or unproven.",
+      "whatWeProvide": "Business readiness evaluation, assistance in compiling necessary startup documentation, strategic roadmap development, and structured business planning support.",
+      "expectedProcess": "1. Business Readiness Assessment completion. 2. Detailed gap analysis of business records and metrics. 3. Implementation of corrective measures and business structuring.",
+      "faqs": [
+        {
+          "q": "Do you guarantee that my business will get funding?",
+          "a": "No, we do not guarantee funding or represent a financial regulator. We provide strategic advisory and packaging support to make your business attractive to potential funders."
+        },
+        {
+          "q": "What parameters do you look at to assess readiness?",
+          "a": "We analyze team competence, business stage, operational structure, financial record keeping, and market viability."
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "resource-1",
+      "title": "How to Know Whether Your Business Idea Is Ready",
+      "category": "Starting a Business",
+      "summary": "A practical guide to validating your business concept before spending time and money building it.",
+      "content": "### Introduction\n\nMany entrepreneurs rush into launching a business simply because they have a great idea. However, an idea is only 5% of the battle. The other 95% is viability, execution, and timing.\n\nHere are three simple tests to evaluate if your business idea is ready:\n\n#### 1. The Problem Test\nDoes your idea solve a clear, specific problem that people are *already* trying to solve? If users aren't seeking solutions or complaining about the current state, they might not be willing to pay for your alternative.\n\n#### 2. The Customer Willingness-to-Pay Test\nTalk to ten potential customers. Do not ask, 'Would you buy this?' Ask, 'What have you spent money on in the last 30 days to solve this problem?' Genuine willingness-to-pay is demonstrated by past behavior, not hypothetical future support.\n\n#### 3. The Execution Test\nDo you have the necessary skills, team, or capital to build the first basic version (MVP)? If it requires a million-dollar platform to test, your idea isn't ready. Start smaller.",
+      "author": "Blessing Udechukwu",
+      "createdAt": "2026-08-01T10:00:00Z"
+    },
+    {
+      "id": "resource-2",
+      "title": "7 Things Every Small Business Needs Before Seeking Growth Support",
+      "category": "Business Growth",
+      "summary": "A checklist of documents, tools, and processes required to show you are ready to scale or seek partnerships.",
+      "content": "### Scalability and Growth Readiness\n\nWhen looking for strategic support, partnerships, or funding, businesses need to show they are organized. Here are the 7 core pillars you should establish:\n\n1. **Registered Entity**: Proper legal incorporation of your business.\n2. **Separated Finances**: A dedicated business bank account. Never mix personal and business funds.\n3. **Clear Value Proposition**: A 2-sentence summary explaining why customers choose you over competitors.\n4. **Documented Customer History**: A list of customers and transactions.\n5. **Basic Online Presence**: A website or professional domain that validates your existence.\n6. **Operational Workflow**: A clear step-by-step of how you deliver your service or product.\n7. **Specific Growth Goals**: Knowing exactly what you will spend money or resources on (e.g. hiring, marketing, inventory).",
+      "author": "Blessing Udechukwu",
+      "createdAt": "2026-08-10T12:00:00Z"
+    },
+    {
+      "id": "resource-3",
+      "title": "Why Your Business Needs a Professional Online Presence",
+      "category": "Digital Presence",
+      "summary": "How a professional website and logo build immediate trust and increase conversions for local and digital businesses.",
+      "content": "### First Impressions Count\n\nIn the digital age, your website is your digital storefront. If a client searches for your business and finds nothing, or a poorly designed Facebook page, they will assume you are either not serious or out of business.\n\n#### The Trust Factor\nA custom domain (e.g., `yourcompany.com`) and matching professional email (e.g., `contact@yourcompany.com`) show that you are an established, committed operation. It increases customer trust by over 70% compared to generic Gmail addresses and third-party portals.\n\n#### Control Your Narrative\nSocial media sites change their algorithms constantly. When you own your website, you own your database, control the visual style, and decide exactly how users learn about your services.",
+      "author": "Blessing Udechukwu",
+      "createdAt": "2026-08-15T09:30:00Z"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-1",
+      "question": "What is Creative Solutions and how can it help my business?",
+      "answer": "Creative Solutions is an advisory and growth platform. We support entrepreneurs and businesses with strategic guidance, creative design, digital presence setup, and business readiness analysis to help you execute your goals successfully.",
+      "category": "General"
+    },
+    {
+      "id": "faq-2",
+      "question": "Do you offer direct funding, grants, or business loans?",
+      "answer": "We do not offer direct loans or guarantee funding. We analyze business readiness, structure your entity and documentation, and provide the strategic support needed to make your business viable for partnerships, loans, or startup investments.",
+      "category": "Strategic / Funding"
+    },
+    {
+      "id": "faq-3",
+      "question": "How do I get started with Creative Solutions?",
+      "answer": "We recommend starting in one of three ways: 1) Browse our services and book a 1-on-1 consultation, 2) Complete our interactive Business Readiness Assessment to get your growth report, or 3) Use our 'Ask Creative Solutions' AI assistant right here on the website to guide you.",
+      "category": "General"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "test-1",
+      "clientName": "David K.",
+      "businessName": "EcoBuild Materials",
+      "text": "Blessing's guidance completely transformed how we structured our startup. The readiness assessment highlighted gaps in our financials that we resolved before reaching out to investors.",
+      "featured": true,
+      "image": ""
+    },
+    {
+      "id": "test-2",
+      "clientName": "Amina U.",
+      "businessName": "Nectar Beauty Solutions",
+      "text": "The website and logo designed by Creative Solutions gave us instant credibility. Our online inquiries increased by 40% in the first two months after launch.",
+      "featured": true,
+      "image": ""
+    }
+  ],
+  "caseStudies": [],
+  "portfolio": [
+    {
+      "id": "port-1",
+      "title": "EcoBuild Brand Identity & Logo",
+      "description": "Clean, professional branding utilizing earth tones and strong typography for an sustainable construction supplier.",
+      "category": "logos",
+      "client": "EcoBuild Materials",
+      "image": ""
+    },
+    {
+      "id": "port-2",
+      "title": "Nectar Beauty E-commerce Hub",
+      "description": "A gorgeous, responsive business website designed to showcase cosmetic treatments and capture local bookings.",
+      "category": "websites",
+      "client": "Nectar Beauty Solutions",
+      "image": ""
+    }
+  ],
+  "aiKnowledge": [
+    {
+      "id": "k-1",
+      "title": "Company Identity & Leadership",
+      "content": "Creative Solutions is owned by Blessing Udechukwu. The contact email is blessingaduba1@gmail.com. It is located in Nigeria but serves clients globally. Creative Solutions provides portfolio building, website building, logo design, professional strategy consultation, digital marketing/promotions, flyer design, and startup growth support.",
+      "category": "company"
+    },
+    {
+      "id": "k-2",
+      "title": "Funding Policy",
+      "content": "Creative Solutions does not guarantee funding, grant approvals, or loans. We do not distribute direct funds or operate as a financial institution. We prepare businesses for strategic growth and funding by analyzing readiness, refining business models, and building their digital brand and presentation.",
+      "category": "funding"
+    }
+  ],
+  "leads": [
+    {
+      "id": "d6f2bca0-dcee-4c75-9819-e0f103bf173a",
+      "name": "John Doe",
+      "email": "john@test.com",
+      "phone": "+2348011112222",
+      "businessName": "Test Auto",
+      "businessStage": "Scaling Up",
+      "need": "Need branding assets",
+      "leadSource": "assessment",
+      "assessmentResult": {
+        "stage": "Operational Growth",
+        "strengths": [
+          "Revenue generating: Demonstrates market validation.",
+          "Lean operations: Lower initial overhead costs."
+        ],
+        "improvements": [],
+        "recommendedServices": [
+          "consultation",
+          "business-readiness-support"
+        ],
+        "answers": {
+          "industry": "AI Tech",
+          "businessStage": "scaling",
+          "duration": "1-3",
+          "revenue": "yes",
+          "employees": "1",
+          "challenge": "Need logo and site scaling support",
+          "goal": "Beta launch",
+          "supportRequired": "comprehensive"
+        }
+      },
+      "status": "new",
+      "notes": [],
+      "intentScore": "High",
+      "createdAt": "2026-08-20T08:05:08.961Z",
+      "interestedService": "Logo Design",
+      "consultationStatus": "requested",
+      "lastInteraction": "2026-08-20T10:58:00.906Z",
+      "updatedAt": "2026-08-20T10:58:00.906Z"
+    },
+    {
+      "id": "d20f7ee1-118c-43b5-b3e3-ece5f3a26919",
+      "name": "Mbasiti Sylvanus",
+      "email": "mbasitisylva@gmail.com",
+      "phone": "798795452",
+      "businessName": "InteracAi",
+      "businessStage": "Idea Stage",
+      "need": "fsff",
+      "leadSource": "assessment",
+      "assessmentResult": {
+        "stage": "Startup Foundation",
+        "strengths": [
+          "Lean operations: Lower initial overhead costs."
+        ],
+        "improvements": [
+          "Validation: Focus on verifying customer demand before building final products.",
+          "Digital footprint: Establishing dynamic marketing channels."
+        ],
+        "recommendedServices": [
+          "logo-design",
+          "website-building",
+          "digital-advertising"
+        ],
+        "answers": {
+          "industry": "SaaS",
+          "businessStage": "startup",
+          "duration": "0-6",
+          "revenue": "no",
+          "employees": "1",
+          "challenge": "no customers",
+          "goal": "pilot test to allow for customers to test.",
+          "supportRequired": "comprehensive"
+        }
+      },
+      "status": "new",
+      "notes": [],
+      "intentScore": "High",
+      "createdAt": "2026-08-20T08:13:56.119Z",
+      "interestedService": "General Strategy",
+      "consultationStatus": "requested",
+      "lastInteraction": "2026-08-20T09:56:12.382Z",
+      "updatedAt": "2026-08-20T09:56:12.382Z"
+    }
+  ],
+  "consultations": [
+    {
+      "id": "bc6996cd-5d10-4b8f-aa2e-886d7da66fd6",
+      "leadId": "d6f2bca0-dcee-4c75-9819-e0f103bf173a",
+      "preferredDate": "2026-09-01",
+      "preferredTime": "11:00",
+      "status": "requested",
+      "notes": "Goal: Sleek logo concept",
+      "createdAt": "2026-08-20T08:05:08.969Z"
+    },
+    {
+      "id": "97e71047-4905-456f-bd6c-edab3d574fd8",
+      "leadId": "d20f7ee1-118c-43b5-b3e3-ece5f3a26919",
+      "preferredDate": "2026-08-20",
+      "preferredTime": "09:00",
+      "status": "requested",
+      "notes": "Goal: roadmap for cutomer  aquisition",
+      "createdAt": "2026-08-20T08:17:20.559Z"
+    },
+    {
+      "id": "ab938f3a-7a12-4a04-b6da-28d7e5f0749e",
+      "leadId": "d6f2bca0-dcee-4c75-9819-e0f103bf173a",
+      "preferredDate": "2026-09-01",
+      "preferredTime": "11:00",
+      "status": "requested",
+      "notes": "Goal: Sleek logo concept",
+      "createdAt": "2026-08-20T08:30:10.231Z"
+    },
+    {
+      "id": "aeed21a8-3168-4bdc-b9c1-3bc1d5ca72ee",
+      "leadId": "d6f2bca0-dcee-4c75-9819-e0f103bf173a",
+      "preferredDate": "2026-09-01",
+      "preferredTime": "11:00",
+      "status": "requested",
+      "notes": "Goal: Sleek logo concept",
+      "createdAt": "2026-08-20T08:32:16.931Z"
+    },
+    {
+      "id": "82784ccc-7fa1-42ad-ba9c-293af8d8b740",
+      "leadId": "d6f2bca0-dcee-4c75-9819-e0f103bf173a",
+      "preferredDate": "2026-09-01",
+      "preferredTime": "11:00",
+      "status": "requested",
+      "notes": "Goal: Sleek logo concept",
+      "createdAt": "2026-08-20T08:40:19.775Z"
+    },
+    {
+      "id": "207d1788-b1c0-46d0-b4f4-a256e4954af4",
+      "leadId": "d6f2bca0-dcee-4c75-9819-e0f103bf173a",
+      "preferredDate": "2026-09-01",
+      "preferredTime": "11:00",
+      "status": "requested",
+      "notes": "Goal: Sleek logo concept",
+      "createdAt": "2026-08-20T08:43:24.564Z"
+    },
+    {
+      "id": "e01f24e5-8439-43e6-8502-f90a8806b496",
+      "leadId": "d6f2bca0-dcee-4c75-9819-e0f103bf173a",
+      "preferredDate": "2026-09-01",
+      "preferredTime": "11:00",
+      "status": "requested",
+      "notes": "Goal: Sleek logo concept",
+      "createdAt": "2026-08-20T08:51:02.882Z"
+    },
+    {
+      "id": "182b8f24-a05c-4b5e-9e55-af59c5dd8ded",
+      "leadId": "d6f2bca0-dcee-4c75-9819-e0f103bf173a",
+      "preferredDate": "2026-09-01",
+      "preferredTime": "11:00",
+      "status": "requested",
+      "notes": "Goal: Sleek logo concept",
+      "createdAt": "2026-08-20T08:52:23.365Z"
+    },
+    {
+      "id": "242e286d-af8d-47c5-ac55-dee8e7d822a4",
+      "leadId": "d6f2bca0-dcee-4c75-9819-e0f103bf173a",
+      "preferredDate": "2026-09-01",
+      "preferredTime": "11:00",
+      "status": "requested",
+      "notes": "Goal: Sleek logo concept",
+      "createdAt": "2026-08-20T08:53:50.171Z"
+    },
+    {
+      "id": "0e14c216-b7f6-4db4-ac2d-262a9f48cf12",
+      "leadId": "d6f2bca0-dcee-4c75-9819-e0f103bf173a",
+      "preferredDate": "2026-09-01",
+      "preferredTime": "11:00",
+      "status": "requested",
+      "notes": "Goal: Sleek logo concept",
+      "createdAt": "2026-08-20T08:55:07.907Z"
+    },
+    {
+      "id": "fe06e18a-6737-46d4-8d09-9cc10675540c",
+      "leadId": "d6f2bca0-dcee-4c75-9819-e0f103bf173a",
+      "preferredDate": "2026-09-01",
+      "preferredTime": "11:00",
+      "status": "requested",
+      "notes": "Goal: Sleek logo concept",
+      "createdAt": "2026-08-20T09:10:31.186Z"
+    },
+    {
+      "id": "b602628c-1a99-430a-a5a8-735981e6fb92",
+      "leadId": "d6f2bca0-dcee-4c75-9819-e0f103bf173a",
+      "preferredDate": "2026-09-01",
+      "preferredTime": "11:00",
+      "status": "requested",
+      "notes": "Goal: Sleek logo concept",
+      "createdAt": "2026-08-20T09:23:30.120Z"
+    },
+    {
+      "id": "8d2946f7-7509-4793-a495-5b451af61ba8",
+      "leadId": "d6f2bca0-dcee-4c75-9819-e0f103bf173a",
+      "preferredDate": "2026-09-01",
+      "preferredTime": "11:00",
+      "status": "requested",
+      "notes": "Goal: Sleek logo concept",
+      "createdAt": "2026-08-20T09:32:13.082Z"
+    },
+    {
+      "id": "8a22953b-8a0f-412f-8d1a-a46b9fd60168",
+      "leadId": "d6f2bca0-dcee-4c75-9819-e0f103bf173a",
+      "preferredDate": "2026-09-01",
+      "preferredTime": "11:00",
+      "status": "requested",
+      "notes": "Goal: Sleek logo concept",
+      "createdAt": "2026-08-20T09:36:19.941Z"
+    },
+    {
+      "id": "e17115ce-3a0b-41d6-9159-df4f18b15708",
+      "leadId": "d6f2bca0-dcee-4c75-9819-e0f103bf173a",
+      "preferredDate": "2026-09-01",
+      "preferredTime": "11:00",
+      "status": "requested",
+      "notes": "Goal: Sleek logo concept",
+      "createdAt": "2026-08-20T09:47:24.465Z"
+    },
+    {
+      "id": "cc543c9f-4c22-4d3a-b313-1e534505bd21",
+      "leadId": "d6f2bca0-dcee-4c75-9819-e0f103bf173a",
+      "preferredDate": "2026-09-01",
+      "preferredTime": "11:00",
+      "status": "requested",
+      "notes": "Goal: Sleek logo concept",
+      "createdAt": "2026-08-20T09:51:34.974Z"
+    },
+    {
+      "id": "ad3383f7-0a03-4963-9c16-fbeeb079e605",
+      "leadId": "d20f7ee1-118c-43b5-b3e3-ece5f3a26919",
+      "preferredDate": "2026-08-22",
+      "preferredTime": "11:00",
+      "status": "requested",
+      "notes": "Goal: fwff",
+      "createdAt": "2026-08-20T09:56:12.393Z"
+    },
+    {
+      "id": "78843aab-6b91-4dcc-864a-411538734c07",
+      "leadId": "d6f2bca0-dcee-4c75-9819-e0f103bf173a",
+      "preferredDate": "2026-09-01",
+      "preferredTime": "11:00",
+      "status": "requested",
+      "notes": "Goal: Sleek logo concept",
+      "createdAt": "2026-08-20T10:58:00.907Z"
+    }
+  ],
+  "analyticsEvents": [
+    {
+      "id": "aa1a22ad-d791-4bff-bd09-79c5b0aa64e2",
+      "type": "assessment_complete",
+      "timestamp": "2026-08-20T08:05:08.962Z",
+      "createdAt": "2026-08-20T08:05:08.962Z"
+    },
+    {
+      "id": "d453a605-efa1-4d8a-9f33-eff1d6bf464e",
+      "type": "booking_complete",
+      "timestamp": "2026-08-20T08:05:08.970Z",
+      "createdAt": "2026-08-20T08:05:08.970Z"
+    },
+    {
+      "id": "97ee6a68-cc15-4904-b9fc-a2a6cd1ac958",
+      "type": "chat_question",
+      "question": "Do you provide direct funding or loans?",
+      "timestamp": "2026-08-20T08:05:08.975Z",
+      "createdAt": "2026-08-20T08:05:08.975Z"
+    },
+    {
+      "id": "318f298a-834e-4f38-9e4d-abd8dd841aa7",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T08:08:13.548Z",
+      "createdAt": "2026-08-20T08:08:13.548Z"
+    },
+    {
+      "id": "c4c8d521-6281-4686-a432-827c851a4181",
+      "type": "assessment_start",
+      "page": "assessment.html",
+      "timestamp": "2026-08-20T08:10:34.796Z",
+      "createdAt": "2026-08-20T08:10:34.796Z"
+    },
+    {
+      "id": "e98e852a-01ac-40a4-aed8-0f7f9ba263c5",
+      "type": "assessment_complete",
+      "timestamp": "2026-08-20T08:13:56.121Z",
+      "createdAt": "2026-08-20T08:13:56.121Z"
+    },
+    {
+      "id": "8e11af6f-da14-4054-833f-3ef373f635c9",
+      "type": "page_view",
+      "page": "services.html",
+      "timestamp": "2026-08-20T08:14:59.873Z",
+      "createdAt": "2026-08-20T08:14:59.873Z"
+    },
+    {
+      "id": "c610e8d7-6383-479d-a615-a00b984593fd",
+      "type": "service_view",
+      "page": "logo-design",
+      "timestamp": "2026-08-20T08:15:00.646Z",
+      "createdAt": "2026-08-20T08:15:00.646Z"
+    },
+    {
+      "id": "e1be88a0-1d9e-4a9c-9359-b659ed804629",
+      "type": "booking_complete",
+      "timestamp": "2026-08-20T08:17:20.560Z",
+      "createdAt": "2026-08-20T08:17:20.560Z"
+    },
+    {
+      "id": "fd66d90f-5a65-4cd0-a68e-d5387f6c7b32",
+      "type": "page_view",
+      "page": "resources.html",
+      "timestamp": "2026-08-20T08:18:06.889Z",
+      "createdAt": "2026-08-20T08:18:06.889Z"
+    },
+    {
+      "id": "6b5b634c-8b2c-4f15-8ef8-b865119a2318",
+      "type": "page_view",
+      "page": "resources.html",
+      "timestamp": "2026-08-20T08:18:19.531Z",
+      "createdAt": "2026-08-20T08:18:19.531Z"
+    },
+    {
+      "id": "e824856c-15af-4a94-baca-6e68fd38ac02",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T08:18:54.077Z",
+      "createdAt": "2026-08-20T08:18:54.078Z"
+    },
+    {
+      "id": "8156e6a7-25b1-449b-add4-29c38aba535d",
+      "type": "chat_open",
+      "page": "/index.html",
+      "timestamp": "2026-08-20T08:19:46.242Z",
+      "createdAt": "2026-08-20T08:19:46.242Z"
+    },
+    {
+      "id": "8e3ce8d1-d5e9-4723-b8f8-26598b03a394",
+      "type": "chat_question",
+      "question": "hello.",
+      "timestamp": "2026-08-20T08:20:04.097Z",
+      "createdAt": "2026-08-20T08:20:04.097Z"
+    },
+    {
+      "id": "7c360aab-c11f-4908-9c48-9de80d907f53",
+      "type": "chat_question",
+      "question": "customer aquisition",
+      "timestamp": "2026-08-20T08:20:30.250Z",
+      "createdAt": "2026-08-20T08:20:30.250Z"
+    },
+    {
+      "id": "b1af26dd-dee2-4ff5-bb99-7a2b6f07b135",
+      "type": "assessment_complete",
+      "timestamp": "2026-08-20T08:30:10.226Z",
+      "createdAt": "2026-08-20T08:30:10.226Z"
+    },
+    {
+      "id": "43a00c45-f557-4a80-9bff-7ee9e31ae1a6",
+      "type": "booking_complete",
+      "timestamp": "2026-08-20T08:30:10.232Z",
+      "createdAt": "2026-08-20T08:30:10.232Z"
+    },
+    {
+      "id": "41c17b9c-7e2d-4a42-b498-4e44e06c1d89",
+      "type": "chat_question",
+      "question": "Do you provide direct funding or loans?",
+      "timestamp": "2026-08-20T08:30:10.235Z",
+      "createdAt": "2026-08-20T08:30:10.235Z"
+    },
+    {
+      "id": "7d6bb947-5e1d-4051-99f2-c2d7798529e2",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T08:31:05.075Z",
+      "createdAt": "2026-08-20T08:31:05.075Z"
+    },
+    {
+      "id": "cda2fa4d-0860-41ff-94a2-667cfcef6051",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T08:31:14.066Z",
+      "createdAt": "2026-08-20T08:31:14.066Z"
+    },
+    {
+      "id": "ac5a4ffd-fef0-4cba-94f8-d4ef03312bd6",
+      "type": "assessment_complete",
+      "timestamp": "2026-08-20T08:32:16.926Z",
+      "createdAt": "2026-08-20T08:32:16.926Z"
+    },
+    {
+      "id": "da2974dd-9d1b-4d51-97a2-b8d1cdb8852e",
+      "type": "booking_complete",
+      "timestamp": "2026-08-20T08:32:16.932Z",
+      "createdAt": "2026-08-20T08:32:16.932Z"
+    },
+    {
+      "id": "492978a2-8919-4c5b-b3be-d13e92e40657",
+      "type": "chat_question",
+      "question": "Do you provide direct funding or loans?",
+      "timestamp": "2026-08-20T08:32:16.935Z",
+      "createdAt": "2026-08-20T08:32:16.935Z"
+    },
+    {
+      "id": "18cca6eb-e5c5-49ee-980e-e2a44cc273aa",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T08:33:55.834Z",
+      "createdAt": "2026-08-20T08:33:55.834Z"
+    },
+    {
+      "id": "7936c02a-95fa-4f83-bd24-64a5930f131a",
+      "type": "assessment_complete",
+      "timestamp": "2026-08-20T08:40:19.770Z",
+      "createdAt": "2026-08-20T08:40:19.770Z"
+    },
+    {
+      "id": "cbdff71d-614c-46f6-9f20-bad27c6cc311",
+      "type": "booking_complete",
+      "timestamp": "2026-08-20T08:40:19.776Z",
+      "createdAt": "2026-08-20T08:40:19.776Z"
+    },
+    {
+      "id": "7a70118a-1fde-4f5b-8d32-483e55e6624f",
+      "type": "chat_question",
+      "question": "Do you provide direct funding or loans?",
+      "timestamp": "2026-08-20T08:40:19.780Z",
+      "createdAt": "2026-08-20T08:40:19.780Z"
+    },
+    {
+      "id": "a63a4588-6976-4cdc-9afc-b78691dbf73f",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T08:42:38.395Z",
+      "createdAt": "2026-08-20T08:42:38.395Z"
+    },
+    {
+      "id": "2198582e-d091-4e16-9b8d-9b4fe7d7fb85",
+      "type": "assessment_complete",
+      "timestamp": "2026-08-20T08:43:24.559Z",
+      "createdAt": "2026-08-20T08:43:24.559Z"
+    },
+    {
+      "id": "0c21dd21-f198-48f3-832d-e86041f083e4",
+      "type": "booking_complete",
+      "timestamp": "2026-08-20T08:43:24.565Z",
+      "createdAt": "2026-08-20T08:43:24.565Z"
+    },
+    {
+      "id": "5f964f0d-f815-40a3-a32a-b898c7c4e449",
+      "type": "chat_question",
+      "question": "Do you provide direct funding or loans?",
+      "timestamp": "2026-08-20T08:43:24.568Z",
+      "createdAt": "2026-08-20T08:43:24.568Z"
+    },
+    {
+      "id": "10696c70-60a3-4df0-bbc0-703df1c27bdc",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T08:44:49.295Z",
+      "createdAt": "2026-08-20T08:44:49.295Z"
+    },
+    {
+      "id": "5d6ec70e-fc40-46ff-887e-a8b57750b75f",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T08:45:07.105Z",
+      "createdAt": "2026-08-20T08:45:07.105Z"
+    },
+    {
+      "id": "56d79188-979c-44e7-be72-4c8d2e3cff92",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T08:45:15.700Z",
+      "createdAt": "2026-08-20T08:45:15.700Z"
+    },
+    {
+      "id": "9158bc4e-3c20-48c2-9af3-9391940d2b6a",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T08:45:24.449Z",
+      "createdAt": "2026-08-20T08:45:24.449Z"
+    },
+    {
+      "id": "9766c08b-dbdb-4695-a350-1b7cb3b46999",
+      "type": "assessment_complete",
+      "timestamp": "2026-08-20T08:51:02.877Z",
+      "createdAt": "2026-08-20T08:51:02.877Z"
+    },
+    {
+      "id": "a939f5e1-d420-4d88-b2cb-a4e7af498725",
+      "type": "booking_complete",
+      "timestamp": "2026-08-20T08:51:02.883Z",
+      "createdAt": "2026-08-20T08:51:02.883Z"
+    },
+    {
+      "id": "7405f2ae-03a6-4d99-9970-17110c111d17",
+      "type": "chat_question",
+      "question": "Do you provide direct funding or loans?",
+      "timestamp": "2026-08-20T08:51:02.887Z",
+      "createdAt": "2026-08-20T08:51:02.887Z"
+    },
+    {
+      "id": "7da0431f-2caa-4f25-a166-08950863d6fb",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T08:51:31.941Z",
+      "createdAt": "2026-08-20T08:51:31.941Z"
+    },
+    {
+      "id": "3e6f3202-6d31-43bb-a5f0-691dcf69fcf1",
+      "type": "assessment_complete",
+      "timestamp": "2026-08-20T08:52:23.360Z",
+      "createdAt": "2026-08-20T08:52:23.360Z"
+    },
+    {
+      "id": "1c48f9bc-4e51-418d-afbc-8d75b9cc5920",
+      "type": "booking_complete",
+      "timestamp": "2026-08-20T08:52:23.366Z",
+      "createdAt": "2026-08-20T08:52:23.366Z"
+    },
+    {
+      "id": "482e1507-c28d-4916-b776-76776d308cc5",
+      "type": "chat_question",
+      "question": "Do you provide direct funding or loans?",
+      "timestamp": "2026-08-20T08:52:23.370Z",
+      "createdAt": "2026-08-20T08:52:23.370Z"
+    },
+    {
+      "id": "3850e8bb-089a-4b0e-b46f-85926c86a86f",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T08:52:46.402Z",
+      "createdAt": "2026-08-20T08:52:46.402Z"
+    },
+    {
+      "id": "c6d43b16-146c-4673-a876-54dd7dfee924",
+      "type": "assessment_complete",
+      "timestamp": "2026-08-20T08:53:50.166Z",
+      "createdAt": "2026-08-20T08:53:50.166Z"
+    },
+    {
+      "id": "e0b91c40-fcb2-41a8-bafb-bdfbc5e7fbca",
+      "type": "booking_complete",
+      "timestamp": "2026-08-20T08:53:50.172Z",
+      "createdAt": "2026-08-20T08:53:50.172Z"
+    },
+    {
+      "id": "801adb7c-fabd-4db2-97b1-6df7a0959367",
+      "type": "chat_question",
+      "question": "Do you provide direct funding or loans?",
+      "timestamp": "2026-08-20T08:53:50.175Z",
+      "createdAt": "2026-08-20T08:53:50.176Z"
+    },
+    {
+      "id": "52fc73e0-130c-4bc7-9be1-d9e5c1e9a28e",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T08:54:12.708Z",
+      "createdAt": "2026-08-20T08:54:12.708Z"
+    },
+    {
+      "id": "45921920-76e4-4cd8-ba07-528a2e8111ae",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T08:54:58.071Z",
+      "createdAt": "2026-08-20T08:54:58.071Z"
+    },
+    {
+      "id": "ad167cce-ca51-44f6-b565-3980392b31a5",
+      "type": "assessment_complete",
+      "timestamp": "2026-08-20T08:55:07.902Z",
+      "createdAt": "2026-08-20T08:55:07.902Z"
+    },
+    {
+      "id": "218ad57c-dc2c-4d55-9bb5-6c63da3409bf",
+      "type": "booking_complete",
+      "timestamp": "2026-08-20T08:55:07.908Z",
+      "createdAt": "2026-08-20T08:55:07.908Z"
+    },
+    {
+      "id": "e3944826-7f1e-4f0b-8f1e-ea8152962c57",
+      "type": "chat_question",
+      "question": "Do you provide direct funding or loans?",
+      "timestamp": "2026-08-20T08:55:07.912Z",
+      "createdAt": "2026-08-20T08:55:07.912Z"
+    },
+    {
+      "id": "c693ce83-721e-4165-b21c-ba03fca034a5",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T08:55:22.819Z",
+      "createdAt": "2026-08-20T08:55:22.819Z"
+    },
+    {
+      "id": "15dd40d1-5374-49cf-b195-3c4db69f3290",
+      "type": "assessment_complete",
+      "timestamp": "2026-08-20T09:10:31.181Z",
+      "createdAt": "2026-08-20T09:10:31.181Z"
+    },
+    {
+      "id": "3e124912-5a2d-4833-b834-ff2a362e09a4",
+      "type": "booking_complete",
+      "timestamp": "2026-08-20T09:10:31.187Z",
+      "createdAt": "2026-08-20T09:10:31.187Z"
+    },
+    {
+      "id": "2cc98b64-2232-4e41-980a-67db9268b9a4",
+      "type": "chat_question",
+      "question": "Do you provide direct funding or loans?",
+      "timestamp": "2026-08-20T09:10:31.190Z",
+      "createdAt": "2026-08-20T09:10:31.190Z"
+    },
+    {
+      "id": "501023ed-6b22-4394-bbb4-cc4931f9353e",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T09:11:06.513Z",
+      "createdAt": "2026-08-20T09:11:06.513Z"
+    },
+    {
+      "id": "d5d8d2ab-0dbe-4d42-b7ea-8fcb52b461ff",
+      "type": "page_view",
+      "page": "about.html",
+      "timestamp": "2026-08-20T09:14:11.775Z",
+      "createdAt": "2026-08-20T09:14:11.775Z"
+    },
+    {
+      "id": "607cb640-8c09-454f-a849-8758cdfbb79e",
+      "type": "page_view",
+      "page": "services.html",
+      "timestamp": "2026-08-20T09:14:23.309Z",
+      "createdAt": "2026-08-20T09:14:23.310Z"
+    },
+    {
+      "id": "b26e72ed-d57a-4a25-987c-88e61f36465e",
+      "type": "page_view",
+      "page": "portfolio.html",
+      "timestamp": "2026-08-20T09:14:30.588Z",
+      "createdAt": "2026-08-20T09:14:30.588Z"
+    },
+    {
+      "id": "4deedc0c-f3d9-4adc-8fbd-7df8f93595d5",
+      "type": "page_view",
+      "page": "resources.html",
+      "timestamp": "2026-08-20T09:14:55.025Z",
+      "createdAt": "2026-08-20T09:14:55.025Z"
+    },
+    {
+      "id": "46866519-fef1-4cef-8d0d-73ac3832c81a",
+      "type": "assessment_start",
+      "page": "assessment.html",
+      "timestamp": "2026-08-20T09:15:02.256Z",
+      "createdAt": "2026-08-20T09:15:02.256Z"
+    },
+    {
+      "id": "14963518-44e6-4c08-b159-7a8d3c932d8e",
+      "type": "page_view",
+      "page": "contact.html",
+      "timestamp": "2026-08-20T09:15:14.930Z",
+      "createdAt": "2026-08-20T09:15:14.930Z"
+    },
+    {
+      "id": "0cc6e7be-eb41-4199-841c-63b206a1e65f",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T09:15:20.000Z",
+      "createdAt": "2026-08-20T09:15:20.000Z"
+    },
+    {
+      "id": "ea9a5dc8-7bf4-4662-bebb-c40e43e902c8",
+      "type": "page_view",
+      "page": "about.html",
+      "timestamp": "2026-08-20T09:15:39.152Z",
+      "createdAt": "2026-08-20T09:15:39.152Z"
+    },
+    {
+      "id": "3ba4f3ff-4efc-4038-ae08-37ca0e21f592",
+      "type": "page_view",
+      "page": "services.html",
+      "timestamp": "2026-08-20T09:15:54.800Z",
+      "createdAt": "2026-08-20T09:15:54.800Z"
+    },
+    {
+      "id": "f9c1c067-174a-4258-a844-fd874444e230",
+      "type": "page_view",
+      "page": "portfolio.html",
+      "timestamp": "2026-08-20T09:16:44.920Z",
+      "createdAt": "2026-08-20T09:16:44.920Z"
+    },
+    {
+      "id": "888be3e2-679c-4ad4-a1a7-fe451f9d579d",
+      "type": "assessment_complete",
+      "timestamp": "2026-08-20T09:23:30.115Z",
+      "createdAt": "2026-08-20T09:23:30.116Z"
+    },
+    {
+      "id": "fbb058c7-6fbd-4399-954e-c77643c36590",
+      "type": "booking_complete",
+      "timestamp": "2026-08-20T09:23:30.121Z",
+      "createdAt": "2026-08-20T09:23:30.121Z"
+    },
+    {
+      "id": "6d4656f2-aa0e-4b39-a284-b57efcea0077",
+      "type": "chat_question",
+      "question": "Do you provide direct funding or loans?",
+      "timestamp": "2026-08-20T09:23:30.124Z",
+      "createdAt": "2026-08-20T09:23:30.124Z"
+    },
+    {
+      "id": "39d3ab3b-9b7e-4e51-a1b3-2507724bf390",
+      "type": "page_view",
+      "page": "portfolio.html",
+      "timestamp": "2026-08-20T09:24:41.037Z",
+      "createdAt": "2026-08-20T09:24:41.037Z"
+    },
+    {
+      "id": "a88ed530-30cd-478a-9291-ff4d4dd910ff",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T09:24:50.009Z",
+      "createdAt": "2026-08-20T09:24:50.009Z"
+    },
+    {
+      "id": "c65dbda3-4388-42f6-8107-cd7b63f63386",
+      "type": "page_view",
+      "page": "about.html",
+      "timestamp": "2026-08-20T09:24:56.651Z",
+      "createdAt": "2026-08-20T09:24:56.651Z"
+    },
+    {
+      "id": "35f1c858-b392-47b9-833f-1f772e1bed7e",
+      "type": "page_view",
+      "page": "services.html",
+      "timestamp": "2026-08-20T09:25:01.549Z",
+      "createdAt": "2026-08-20T09:25:01.549Z"
+    },
+    {
+      "id": "d8f25699-9f10-4f9e-80b7-82f52e7cd643",
+      "type": "page_view",
+      "page": "portfolio.html",
+      "timestamp": "2026-08-20T09:25:04.181Z",
+      "createdAt": "2026-08-20T09:25:04.181Z"
+    },
+    {
+      "id": "93dd6ad4-b345-43c1-932f-58ce9dbd81a2",
+      "type": "page_view",
+      "page": "resources.html",
+      "timestamp": "2026-08-20T09:25:06.927Z",
+      "createdAt": "2026-08-20T09:25:06.927Z"
+    },
+    {
+      "id": "174664ce-28f7-4c65-993d-a87b34822509",
+      "type": "assessment_start",
+      "page": "assessment.html",
+      "timestamp": "2026-08-20T09:25:09.401Z",
+      "createdAt": "2026-08-20T09:25:09.401Z"
+    },
+    {
+      "id": "a2c18fdf-6595-448c-b538-b6c07c610bb3",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T09:25:14.387Z",
+      "createdAt": "2026-08-20T09:25:14.387Z"
+    },
+    {
+      "id": "7763fc0a-8086-4916-bd60-e9355bf96380",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T09:25:43.115Z",
+      "createdAt": "2026-08-20T09:25:43.115Z"
+    },
+    {
+      "id": "3203372d-f9a2-41cb-8d15-1a2eaa193093",
+      "type": "page_view",
+      "page": "about.html",
+      "timestamp": "2026-08-20T09:27:05.280Z",
+      "createdAt": "2026-08-20T09:27:05.280Z"
+    },
+    {
+      "id": "1900ce69-4e00-401d-bd73-f8bc0b20310f",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T09:27:33.483Z",
+      "createdAt": "2026-08-20T09:27:33.483Z"
+    },
+    {
+      "id": "4805fdfb-7331-4c25-90a5-2f70b0397181",
+      "type": "assessment_complete",
+      "timestamp": "2026-08-20T09:32:13.077Z",
+      "createdAt": "2026-08-20T09:32:13.077Z"
+    },
+    {
+      "id": "872f03de-2e21-4bc2-81a9-f773512ca766",
+      "type": "booking_complete",
+      "timestamp": "2026-08-20T09:32:13.083Z",
+      "createdAt": "2026-08-20T09:32:13.083Z"
+    },
+    {
+      "id": "39bd78a1-840e-4727-b20d-52e35f1e7750",
+      "type": "chat_question",
+      "question": "Do you provide direct funding or loans?",
+      "timestamp": "2026-08-20T09:32:13.086Z",
+      "createdAt": "2026-08-20T09:32:13.086Z"
+    },
+    {
+      "id": "f2f99f60-71d8-4726-a1ce-365cc2be62c9",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T09:33:16.756Z",
+      "createdAt": "2026-08-20T09:33:16.756Z"
+    },
+    {
+      "id": "73a69dc8-3e97-4d64-9091-fd2e65328184",
+      "type": "page_view",
+      "page": "about.html",
+      "timestamp": "2026-08-20T09:33:28.862Z",
+      "createdAt": "2026-08-20T09:33:28.862Z"
+    },
+    {
+      "id": "91389d34-6d4f-4982-aabb-b81010f1feb7",
+      "type": "assessment_complete",
+      "timestamp": "2026-08-20T09:36:19.936Z",
+      "createdAt": "2026-08-20T09:36:19.936Z"
+    },
+    {
+      "id": "d10adca3-063b-4472-9dc3-7482a158cd61",
+      "type": "booking_complete",
+      "timestamp": "2026-08-20T09:36:19.942Z",
+      "createdAt": "2026-08-20T09:36:19.942Z"
+    },
+    {
+      "id": "eab44080-1c86-4bad-b4fe-5a4dd929a26f",
+      "type": "chat_question",
+      "question": "Do you provide direct funding or loans?",
+      "timestamp": "2026-08-20T09:36:19.946Z",
+      "createdAt": "2026-08-20T09:36:19.946Z"
+    },
+    {
+      "id": "5c6cd8a6-808a-4de0-a86c-34446ec1a676",
+      "type": "page_view",
+      "page": "about.html",
+      "timestamp": "2026-08-20T09:44:28.939Z",
+      "createdAt": "2026-08-20T09:44:28.939Z"
+    },
+    {
+      "id": "9826ffbb-6820-4d3f-9b82-413d9c738d3e",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T09:44:34.043Z",
+      "createdAt": "2026-08-20T09:44:34.043Z"
+    },
+    {
+      "id": "2e64fccb-9ca5-48a6-86d8-4767268a3df2",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T09:44:39.433Z",
+      "createdAt": "2026-08-20T09:44:39.433Z"
+    },
+    {
+      "id": "2499c0f1-e5df-491b-87ad-cd082d4d91db",
+      "type": "page_view",
+      "page": "about.html",
+      "timestamp": "2026-08-20T09:44:42.315Z",
+      "createdAt": "2026-08-20T09:44:42.315Z"
+    },
+    {
+      "id": "0c913858-8de7-4427-97f4-64b4f9311fac",
+      "type": "page_view",
+      "page": "services.html",
+      "timestamp": "2026-08-20T09:44:49.329Z",
+      "createdAt": "2026-08-20T09:44:49.329Z"
+    },
+    {
+      "id": "65ee187b-f461-4b9f-9b58-f0b16d54794f",
+      "type": "page_view",
+      "page": "portfolio.html",
+      "timestamp": "2026-08-20T09:44:53.130Z",
+      "createdAt": "2026-08-20T09:44:53.131Z"
+    },
+    {
+      "id": "69e49fee-f022-47fa-a4d8-669b1d0e33ee",
+      "type": "page_view",
+      "page": "resources.html",
+      "timestamp": "2026-08-20T09:44:55.277Z",
+      "createdAt": "2026-08-20T09:44:55.277Z"
+    },
+    {
+      "id": "c74afa3e-41b9-42db-ac88-c02f4bd567f9",
+      "type": "page_view",
+      "page": "portfolio.html",
+      "timestamp": "2026-08-20T09:44:57.426Z",
+      "createdAt": "2026-08-20T09:44:57.426Z"
+    },
+    {
+      "id": "83d1958f-ed3c-4989-81f8-a4db4ec8a154",
+      "type": "page_view",
+      "page": "services.html",
+      "timestamp": "2026-08-20T09:44:59.394Z",
+      "createdAt": "2026-08-20T09:44:59.394Z"
+    },
+    {
+      "id": "a11450e2-c37b-4369-ba7f-3936a1feceee",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T09:45:01.909Z",
+      "createdAt": "2026-08-20T09:45:01.909Z"
+    },
+    {
+      "id": "5b3e51b0-3803-4eee-bf2b-d8d4921981e8",
+      "type": "assessment_complete",
+      "timestamp": "2026-08-20T09:47:24.461Z",
+      "createdAt": "2026-08-20T09:47:24.461Z"
+    },
+    {
+      "id": "ab5c5e98-11b0-4411-bb9e-c9b240549afe",
+      "type": "booking_complete",
+      "timestamp": "2026-08-20T09:47:24.467Z",
+      "createdAt": "2026-08-20T09:47:24.467Z"
+    },
+    {
+      "id": "dd8bc0a6-fcb8-48b9-9e4e-ac971c68fd05",
+      "type": "chat_question",
+      "question": "Do you provide direct funding or loans?",
+      "timestamp": "2026-08-20T09:47:24.471Z",
+      "createdAt": "2026-08-20T09:47:24.472Z"
+    },
+    {
+      "id": "7c867ffe-ad9f-4309-9c1c-dae0f6cf8df2",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T09:47:38.973Z",
+      "createdAt": "2026-08-20T09:47:38.973Z"
+    },
+    {
+      "id": "f5798fcb-61e2-4e32-bc95-424f3cf59cee",
+      "type": "page_view",
+      "page": "about.html",
+      "timestamp": "2026-08-20T09:49:34.482Z",
+      "createdAt": "2026-08-20T09:49:34.482Z"
+    },
+    {
+      "id": "df34bdae-1954-436b-8aad-70a230b2ce06",
+      "type": "assessment_complete",
+      "timestamp": "2026-08-20T09:51:34.969Z",
+      "createdAt": "2026-08-20T09:51:34.969Z"
+    },
+    {
+      "id": "cd42cf22-3065-451a-ab92-0b010423dedb",
+      "type": "booking_complete",
+      "timestamp": "2026-08-20T09:51:34.975Z",
+      "createdAt": "2026-08-20T09:51:34.975Z"
+    },
+    {
+      "id": "98687624-653a-4324-a577-da9b19fd4f84",
+      "type": "chat_question",
+      "question": "Do you provide direct funding or loans?",
+      "timestamp": "2026-08-20T09:51:34.979Z",
+      "createdAt": "2026-08-20T09:51:34.979Z"
+    },
+    {
+      "id": "48c9c32e-55f0-4df0-8e62-fa02c2ac06e3",
+      "type": "page_view",
+      "page": "about.html",
+      "timestamp": "2026-08-20T09:52:12.371Z",
+      "createdAt": "2026-08-20T09:52:12.371Z"
+    },
+    {
+      "id": "c264b6f0-f184-492b-bf33-9d4384ab3579",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T09:52:20.084Z",
+      "createdAt": "2026-08-20T09:52:20.084Z"
+    },
+    {
+      "id": "8c28c249-24fd-476a-9f63-2ec834fd7c7c",
+      "type": "assessment_start",
+      "page": "assessment.html",
+      "timestamp": "2026-08-20T09:53:40.990Z",
+      "createdAt": "2026-08-20T09:53:40.990Z"
+    },
+    {
+      "id": "39575234-86be-4c48-8a7b-4db602c499ca",
+      "type": "page_view",
+      "page": "about.html",
+      "timestamp": "2026-08-20T09:54:33.967Z",
+      "createdAt": "2026-08-20T09:54:33.967Z"
+    },
+    {
+      "id": "80f8b0e9-57e9-43b3-91b3-73da8737b112",
+      "type": "booking_complete",
+      "timestamp": "2026-08-20T09:56:12.394Z",
+      "createdAt": "2026-08-20T09:56:12.394Z"
+    },
+    {
+      "id": "bfa98882-31dd-4de8-95d9-fbc5e9af8d99",
+      "type": "page_view",
+      "page": "resources.html",
+      "timestamp": "2026-08-20T09:56:25.403Z",
+      "createdAt": "2026-08-20T09:56:25.403Z"
+    },
+    {
+      "id": "376de010-6ef3-46c5-aedd-2bfa7ef72bd7",
+      "type": "page_view",
+      "page": "resources.html",
+      "timestamp": "2026-08-20T09:56:48.035Z",
+      "createdAt": "2026-08-20T09:56:48.035Z"
+    },
+    {
+      "id": "81c094ec-7558-4f71-ae4e-8d684cb10979",
+      "type": "assessment_start",
+      "page": "assessment.html",
+      "timestamp": "2026-08-20T10:37:26.063Z",
+      "createdAt": "2026-08-20T10:37:26.063Z"
+    },
+    {
+      "id": "83427954-8389-4b58-a7dd-7525938d3780",
+      "type": "page_view",
+      "page": "resources.html",
+      "timestamp": "2026-08-20T10:37:29.279Z",
+      "createdAt": "2026-08-20T10:37:29.279Z"
+    },
+    {
+      "id": "8aca33d9-b990-4227-ba57-843cfbe1d423",
+      "type": "page_view",
+      "page": "portfolio.html",
+      "timestamp": "2026-08-20T10:37:31.687Z",
+      "createdAt": "2026-08-20T10:37:31.687Z"
+    },
+    {
+      "id": "78f6a6da-7ff7-495c-8dd1-9af980fd4f3f",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T10:44:52.325Z",
+      "createdAt": "2026-08-20T10:44:52.325Z"
+    },
+    {
+      "id": "47238054-5826-465c-a7f8-964ffccfc62e",
+      "type": "assessment_complete",
+      "timestamp": "2026-08-20T10:58:00.901Z",
+      "createdAt": "2026-08-20T10:58:00.901Z"
+    },
+    {
+      "id": "e4f54e8e-e133-4354-af5f-2c0d7dbe265b",
+      "type": "booking_complete",
+      "timestamp": "2026-08-20T10:58:00.909Z",
+      "createdAt": "2026-08-20T10:58:00.909Z"
+    },
+    {
+      "id": "2907650c-4df8-4243-9fb2-69670443875c",
+      "type": "chat_question",
+      "question": "Do you provide direct funding or loans?",
+      "timestamp": "2026-08-20T10:58:00.913Z",
+      "createdAt": "2026-08-20T10:58:00.913Z"
+    },
+    {
+      "id": "c5d0f29f-acbe-4707-9937-5c78ed1ecdc1",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T10:59:22.903Z",
+      "createdAt": "2026-08-20T10:59:22.903Z"
+    },
+    {
+      "id": "476bbb2d-18a3-4bf1-8218-0c4509a32060",
+      "type": "page_view",
+      "page": "services.html",
+      "timestamp": "2026-08-20T11:00:15.871Z",
+      "createdAt": "2026-08-20T11:00:15.871Z"
+    },
+    {
+      "id": "c228f95b-d7a7-49ed-b92a-faac73cea2d9",
+      "type": "page_view",
+      "page": "index.html",
+      "timestamp": "2026-08-20T11:00:26.209Z",
+      "createdAt": "2026-08-20T11:00:26.210Z"
+    }
+  ]
+}

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Solutions — Practical Growth Advisory & Creative Services</title>
+  <meta name="description" content="Creative Solutions helps startups, entrepreneurs, and businesses turn ideas into practical, growth-oriented solutions through strategy, branding, and websites.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- DYNAMICALLY LOADED HEADER -->
+  <header></header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-bg" style="background-image: url('asset/hero.png');">
+    <div class="container">
+      <div class="hero-content">
+        <span class="section-tag">Value First. Growth Always.</span>
+        <h1>Turning Ideas Into Practical Solutions and Business Growth.</h1>
+        <p class="hero-description">
+          Creative Solutions supports entrepreneurs and businesses with strategic guidance, creative services, digital solutions, and business support designed to help them move from ideas to meaningful results.
+        </p>
+        <div class="btn-group">
+          <a href="book.html" class="btn btn-primary">Book a Consultation</a>
+          <a href="services.html" class="btn btn-secondary">Explore Our Services</a>
+          <button onclick="document.getElementById('chat-widget-trigger').click();" class="btn btn-dark">Ask Creative Solutions</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMMEDIATE VALUE SELECTION ("What are you trying to achieve?") -->
+  <section class="value-selection">
+    <div class="container" style="padding-top: 5rem; padding-bottom: 5rem;">
+      <div class="section-title-wrap" style="margin-bottom: 2rem;">
+        <span class="section-tag">Let's start with your goals</span>
+        <h2>What Are You Trying to Achieve?</h2>
+        <p>Select your primary goal to see how we customize our services for your path.</p>
+      </div>
+
+      <div class="value-grid">
+        <div class="value-card">
+          <div class="value-icon">💡</div>
+          <h3>I have a business idea</h3>
+          <p>You need to validate customer willingness-to-pay, formulate a structured business plan, and prepare your startup roadmap.</p>
+          <a href="assessment.html" class="value-link">Validate Idea &rarr;</a>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">📈</div>
+          <h3>I want to grow my business</h3>
+          <p>You need strategic consultation, operational adjustments, and targeted promotions to scale your customer base.</p>
+          <a href="book.html" class="value-link">Plan Growth &rarr;</a>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🎨</div>
+          <h3>I need professional branding</h3>
+          <p>You need a professional, memorable logo design and matching brand identity files to establish instant credibility.</p>
+          <a href="services.html?service=logo-design" class="value-link">Create Identity &rarr;</a>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🌐</div>
+          <h3>I need a website</h3>
+          <p>You need a clean, responsive, and mobile-friendly website layout that clearly displays services and captures client leads.</p>
+          <a href="services.html?service=website-building" class="value-link">Build Site &rarr;</a>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">📢</div>
+          <h3>I need promotional support</h3>
+          <p>You need custom digital ad setups and print-ready flyer assets to advertise services or launch upcoming offers.</p>
+          <a href="services.html?service=digital-advertising" class="value-link">Launch Promo &rarr;</a>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">💼</div>
+          <h3>I need business guidance</h3>
+          <p>You need structured advisory support to review cashflows, operational metrics, and prepare documentation for funding.</p>
+          <a href="services.html?service=business-readiness-support" class="value-link">Request Advisory &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO WE HELP SECTION -->
+  <section class="audience-section" style="background-color: var(--color-milk);">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Tailored Partnerships</span>
+        <h2>Who We Help</h2>
+        <p>We work with individuals and businesses at various stages to deliver exact strategies that minimize execution risks.</p>
+      </div>
+
+      <div class="audience-tabs">
+        <div class="tab-nav">
+          <button class="tab-btn active" data-tab="tab-entrepreneurs">Entrepreneurs</button>
+          <button class="tab-btn" data-tab="tab-startups">Startups</button>
+          <button class="tab-btn" data-tab="tab-small">Small Businesses</button>
+          <button class="tab-btn" data-tab="tab-established">Established Businesses</button>
+          <button class="tab-btn" data-tab="tab-professionals">Professionals</button>
+        </div>
+
+        <!-- Tab 1: Entrepreneurs -->
+        <div class="tab-content active grid-2" id="tab-entrepreneurs">
+          <div class="audience-info">
+            <h3>Refine and Validate Your Concepts</h3>
+            <p>For individuals preparing to take their first step. We help you transition from raw ideas to structural planning, verifying feasibility and market readiness.</p>
+            <ul class="audience-list">
+              <li>Analyze market viability and target client personas</li>
+              <li>Compile initial startup roadmaps and feasibility sheets</li>
+              <li>Establish business frameworks and legal setups</li>
+            </ul>
+          </div>
+          <div class="audience-image">
+            <img src="asset/audience-1.png" alt="Entrepreneurs Concept Validation" style="width: 100%; height: 280px; object-fit: cover; border-radius: var(--radius-sm); border: 1px solid var(--color-border); box-shadow: var(--shadow-subtle);" />
+          </div>
+        </div>
+
+        <!-- Tab 2: Startups -->
+        <div class="tab-content grid-2" id="tab-startups">
+          <div class="audience-info">
+            <h3>Establish Brand Authority & Systems</h3>
+            <p>For businesses setting up operations. We provide the foundational creative elements (logo, guidelines) and web hubs that secure client trust.</p>
+            <ul class="audience-list">
+              <li>Launch custom websites optimized for high conversion</li>
+              <li>Establish visual brand identities and custom logo templates</li>
+              <li>Formulate startup pitch documentation and structured operations</li>
+            </ul>
+          </div>
+          <div class="audience-image">
+            <img src="asset/audience-2.png" alt="Startups Branding and Systems" style="width: 100%; height: 280px; object-fit: cover; border-radius: var(--radius-sm); border: 1px solid var(--color-border); box-shadow: var(--shadow-subtle);" />
+          </div>
+        </div>
+
+        <!-- Tab 3: Small Businesses -->
+        <div class="tab-content grid-2" id="tab-small">
+          <div class="audience-info">
+            <h3>Maximize Local Visibility & Sales</h3>
+            <p>For operations aiming to expand their client base. We structure digital ads and promotional designs to put your products in front of buyers.</p>
+            <ul class="audience-list">
+              <li>Deploy targeted digital advertising campaigns</li>
+              <li>Design professional promotional flyer materials for print and web</li>
+              <li>Review client-lead funnels to increase monthly conversions</li>
+            </ul>
+          </div>
+          <div class="audience-image">
+            <img src="asset/audience-3.png" alt="Small Business Digital Advertising" style="width: 100%; height: 280px; object-fit: cover; border-radius: var(--radius-sm); border: 1px solid var(--color-border); box-shadow: var(--shadow-subtle);" />
+          </div>
+        </div>
+
+        <!-- Tab 4: Established Businesses -->
+        <div class="tab-content grid-2" id="tab-established">
+          <div class="audience-info">
+            <h3>Optimize for Long-Term Scale</h3>
+            <p>For companies seeking strategic support and long-term viability. We provide deep-dive advisory to restructure workflows and audit growth blockers.</p>
+            <ul class="audience-list">
+              <li>Audit operational records and structure bookkeeping</li>
+              <li>Review scaling opportunities and validate growth metrics</li>
+              <li>Prepare strategic business case-files for funding readiness</li>
+            </ul>
+          </div>
+          <div class="audience-image">
+            <img src="asset/audience-4.png" alt="Established Business Growth" style="width: 100%; height: 280px; object-fit: cover; border-radius: var(--radius-sm); border: 1px solid var(--color-border); box-shadow: var(--shadow-subtle);" />
+          </div>
+        </div>
+
+        <!-- Tab 5: Professionals -->
+        <div class="tab-content grid-2" id="tab-professionals">
+          <div class="audience-info">
+            <h3>Build High-Value Personal Brands</h3>
+            <p>For freelancers, specialists, and consultants looking to command premium rates. We build digital portfolios that display expertise.</p>
+            <ul class="audience-list">
+              <li>Curate and write case studies of your past work</li>
+              <li>Design and package outstanding personal portfolio folders</li>
+              <li>Optimize personal branding assets and profile guidelines</li>
+            </ul>
+          </div>
+          <div class="audience-image">
+            <img src="asset/audience-5.png" alt="Professional Portfolio Creation" style="width: 100%; height: 280px; object-fit: cover; border-radius: var(--radius-sm); border: 1px solid var(--color-border); box-shadow: var(--shadow-subtle);" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES PREVIEW SECTION -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Core Capabilities</span>
+        <h2>How We Support Your Growth</h2>
+        <p>Creative Solutions bridges the gap between business planning and professional execution with core specialized services.</p>
+      </div>
+
+      <div class="grid-3" id="home-services-grid">
+        <!-- Dynamically Loaded Services cards -->
+        <div style="grid-column: 1/-1; text-align: center; padding: 2rem;">Loading services...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK SECTION -->
+  <section class="process-section" style="background-color: var(--color-milk); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Our Methodology</span>
+        <h2>The 5-Step Progress Loop</h2>
+        <p>We believe in structured execution. We guide you through a step-by-step process that eliminates assumptions.</p>
+      </div>
+
+      <div class="process-flow">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <h4>Understand</h4>
+          <p>We analyze your business stage, goals, and baseline metrics.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <h4>Assess</h4>
+          <p>We audit operational gaps and identify viability strengths.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <h4>Plan</h4>
+          <p>We map out a milestone roadmap with exact deliverables.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <h4>Support</h4>
+          <p>We deploy design, websites, or strategic packaging.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">05</div>
+          <h4>Grow</h4>
+          <p>We measure leads, analyze feedback, and optimize outcomes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSINESS ASSESSMENT TEASER BANNER -->
+  <section class="teaser-section">
+    <div class="container">
+      <div class="teaser-box">
+        <div class="teaser-content">
+          <span class="section-tag" style="color: var(--color-accent-light);">Interactive Tool</span>
+          <h2>Is Your Business Ready for Growth or Funding?</h2>
+          <p style="margin-top: 0.8rem;">Evaluate your startup readiness. Complete our 3-minute Business Assessment to generate a structural profile highlighting strengths and improvements.</p>
+        </div>
+        <div>
+          <a href="assessment.html" class="btn btn-primary" style="background-color: var(--color-white); color: var(--color-dark); font-weight: 600;">Take the Assessment</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS & FAQ SECTION -->
+  <section class="proof-section">
+    <div class="container">
+      <div class="grid-2">
+        <div class="testimonials-column">
+          <span class="section-tag">Testimonials</span>
+          <h2>What Clients Say</h2>
+          <p>We focus on building lasting relationships through practical business results.</p>
+          
+          <div id="home-testimonials-container" style="margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
+            <!-- Dynamically Loaded Testimonials -->
+            <p>Loading testimonials...</p>
+          </div>
+        </div>
+
+        <div class="faqs-column" id="faqs">
+          <span class="section-tag">Answering Queries</span>
+          <h2>Frequently Asked Questions</h2>
+          <p>Common questions about our models, support, and business structures.</p>
+
+          <div id="home-faq-list" style="margin-top: 2.5rem;">
+            <!-- Dynamically Loaded FAQs -->
+            <p>Loading FAQs...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOK STRATEGY CTA -->
+  <section class="booking-cta-section" style="background-color: var(--color-white); text-align: center;">
+    <div class="container" style="max-width: 600px;">
+      <span class="section-tag">Action Steps</span>
+      <h2>Let's Structure Your Business</h2>
+      <p style="margin-top: 0.5rem; margin-bottom: 2rem;">Schedule a strategic 1-on-1 consultation to analyze your ideas, solve design bottlenecks, or build a professional website roadmap.</p>
+      <a href="book.html" class="btn btn-primary">Book a Consultation</a>
+    </div>
+  </section>
+
+  <!-- DYNAMICALLY LOADED FOOTER -->
+  <footer></footer>
+
+  <!-- SCRIPT LOADING -->
+  <script src="js/components.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

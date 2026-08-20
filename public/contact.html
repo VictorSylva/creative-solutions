@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Creative Solutions</title>
+  <meta name="description" content="Reach out to Creative Solutions. Send inquiries regarding website design, logos, flyer creation, or strategic business consultations.">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 3rem;
+    }
+    .contact-info-panel {
+      background-color: var(--color-white);
+      border: 1px solid var(--color-border);
+      padding: 3rem;
+      border-radius: var(--radius-sm);
+    }
+    .contact-info-item {
+      margin-bottom: 2rem;
+    }
+    .contact-info-item h4 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-accent);
+      margin-bottom: 0.5rem;
+    }
+    .contact-info-item p {
+      font-size: 1.1rem;
+      margin-bottom: 0;
+    }
+    #contact-response-message {
+      padding: 1rem;
+      border-radius: var(--radius-sm);
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- DYNAMICALLY LOADED HEADER -->
+  <header></header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header-bg" style="background-image: url('asset/audience-3.png');">
+    <div class="container">
+      <span class="section-tag">Direct Line</span>
+      <h1>Contact Creative Solutions</h1>
+      <p>Send us a direct message, trigger an email, or initiate a fast WhatsApp conversation to get started.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT GRID SECTION -->
+  <section class="contact-section" style="background-color: var(--color-milk);">
+    <div class="container" style="padding-top: 2rem; padding-bottom: 5rem;">
+      <div class="contact-grid">
+        
+        <!-- Contact details -->
+        <div class="contact-info-panel">
+          <h2>Get in touch</h2>
+          <p style="margin-top: 0.5rem; margin-bottom: 2.5rem; font-size: 0.95rem;">Blessing Udechukwu reviews all incoming inquiries and will contact you within 24 business hours.</p>
+          
+          <div class="contact-info-item">
+            <h4>Email</h4>
+            <p><a href="mailto:blessingaduba1@gmail.com">blessingaduba1@gmail.com</a></p>
+          </div>
+
+          <div class="contact-info-item">
+            <h4>Phone</h4>
+            <p id="contact-panel-phone"><a href="tel:+2348123456789">+234 812 345 6789</a></p>
+          </div>
+
+          <div class="contact-info-item">
+            <h4>WhatsApp Link</h4>
+            <p id="contact-panel-whatsapp"><a href="https://wa.me/2348123456789" target="_blank" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem; margin-top: 0.5rem;">Start Chat</a></p>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="contact-form-panel" style="background-color: var(--color-white); border: 1px solid var(--color-border); padding: 3rem; border-radius: var(--radius-sm);">
+          <h2>Send a message</h2>
+          <p style="margin-top: 0.5rem; margin-bottom: 2rem; font-size: 0.95rem;">Describe your project requirements or business startup challenges.</p>
+
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="contact-name">Full Name *</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="Blessing Udechukwu" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email">Email Address *</label>
+              <input type="email" id="contact-email" class="form-control" placeholder="blessingaduba1@gmail.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-phone">Phone Number</label>
+              <input type="tel" id="contact-phone" class="form-control" placeholder="+234 800 000 0000" />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-business">Business Name (or Idea)</label>
+              <input type="text" id="contact-business" class="form-control" placeholder="Creative Solutions" />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">What do you need help with? *</label>
+              <textarea id="contact-message" class="form-control" placeholder="I want to build a business website and logo..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Message</button>
+            <div id="contact-response-message"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DYNAMICALLY LOADED FOOTER -->
+  <footer></footer>
+
+  <!-- SCRIPT LOADING -->
+  <script src="js/components.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Set dynamic contacts on load
+    fetch('/api/settings')
+      .then(res => res.json())
+      .then(settings => {
+        if (settings) {
+          const phoneEl = document.getElementById('contact-panel-phone');
+          const whatsappEl = document.getElementById('contact-panel-whatsapp');
+          if (phoneEl && settings.phone) {
+            phoneEl.innerHTML = `<a href="tel:${settings.phone.replace(/\s+/g, '')}">${settings.phone}</a>`;
+          }
+          if (whatsappEl && settings.whatsapp) {
+            whatsappEl.innerHTML = `<a href="${settings.whatsapp}" target="_blank" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem; margin-top: 0.5rem;">Start Chat</a>`;
+          }
+        }
+      });
+  </script>
+</body>
+</html>
